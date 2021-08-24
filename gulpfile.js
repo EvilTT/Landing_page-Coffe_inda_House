@@ -14,7 +14,9 @@ const uglify = require('gulp-uglify-es').default
 const babel = require('gulp-babel')
 const webp = require('gulp-webp')
 const webpHTML = require('gulp-webp-html')
-// const imagemin = require('gulp-imagemin')
+const ttf2woff = require('gulp-ttf2woff')
+const ttf2woff2 = require('gulp-ttf2woff2')
+
 
 const path = {
     build: {
@@ -28,14 +30,14 @@ const path = {
         html: entry + '/*.html',
         css: entry + '/scss/style.scss',
         js: entry + '/js/index.js',
-        images: entry + '/images/**/*.' + '{jpg, png, svg, gif, ico, webp}',
-        fonts: entry + '/fonts/*.ttf',
+        images: entry + '/images/**' + '/*.+(png|jpg|gif|ico|svg|webp)',
+        fonts: entry + '/fonts/**',
     },
     watch: {
         html: entry + '/**/*.html',
         css: entry + '/scss/**/*.scss',
         js: entry + '/js/**/*.js',
-        images: entry + '/images/**/*.' + '{jpg, png, svg, gif, ico, webp}',
+        images: entry + '/images/**' + '/*.+(png|jpg|gif|ico|svg|webp)',
     },
     clear: './' + output + '/',
 }
@@ -57,11 +59,12 @@ const html = () => {
         .pipe(browserSync.stream())
 }
 
-const watchFile = () =>{
+const watchFile = () => {
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.css], css) 
     gulp.watch([path.src.js], js)   
-    gulp.watch([path.src.images], img)   
+    gulp.watch([path.src.images], img)  
+    gulp.watch([path.src.fonts], fonts) 
 }
 
 const clearBuild = () => del(path.clear)
@@ -117,9 +120,17 @@ const img = () => {
         .pipe(browserSync.stream())
 }
 
-const build = gulp.series(clearBuild, gulp.parallel(js, css, html, img))
+const fonts = () => {
+    src(path.src.fonts)
+    .pipe(dest(path.build.fonts))
+    .pipe(browserSync.stream())
+}
+
+
+const build = gulp.series(clearBuild, gulp.parallel(js, css, html, img, fonts))
 const watch = gulp.parallel(build, updateBrowser, watchFile)
 
+exports.fonts = fonts
 exports.img = img
 exports.js = js
 exports.css = css

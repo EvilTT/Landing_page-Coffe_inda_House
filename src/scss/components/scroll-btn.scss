@@ -1,0 +1,33 @@
+//! Scroll to top button 
+.arrow_container{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 10px;
+    background: rgba( 211, 211, 211, 0.15 );
+    backdrop-filter: blur( 8.0px );
+    -webkit-backdrop-filter: blur( 8.0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    &:hover{
+        background-color:rgba(211, 211, 211, 0.541);
+        .arrow_icon > i{
+            color: black;
+            transform: translateY(-3px);
+        }
+    }
+    .arrow_icon{
+        padding: 10px;
+        i{
+            transition: all 0.3s ease;
+            @include adaptiv-font(30, 15);
+            color: rgb(231, 231, 231);
+        }
+    }
+}
+

@@ -1,7 +1,16 @@
 //! Import configuration files 
 @import "./config/normalize.scss";
+@import "./config/fonts.scss";
 @import "./config/variables.scss";
 @import "./config/mixin.scss";
+@import "./config/templates.scss";
+@import "./config/global.scss";
+//? Icons FA5 link 
+@import "./config/icons.scss";
+
+//! Import components files
+@import "./components/menu.scss";
+@import "./components/scroll-btn.scss";
 
 
 
