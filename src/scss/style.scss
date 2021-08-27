@@ -9,9 +9,13 @@
 @import "./config/icons.scss";
 
 //! Import components files
-@import "./components/menu.scss";
+@import "./components/menu-navigation.scss";
 @import "./components/scroll-btn.scss";
+//? Main components 
+@import "./components/about.scss";
+@import "./components/menu-position.scss";
 
+// @import "./components/menu.scss";
 
-
+//! Media  
 @import "./config/media.scss";

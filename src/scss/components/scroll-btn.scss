@@ -4,20 +4,19 @@
     bottom: 50px;
     right: 50px;
     border-radius: 10px;
-    background: rgba( 211, 211, 211, 0.15 );
-    backdrop-filter: blur( 8.0px );
-    -webkit-backdrop-filter: blur( 8.0px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  @include glassmorphizm;
+  @include glassMorShadow;
     display: flex;
     align-items: center;
     justify-content: center;
     display: none;
     transition: all 0.3s ease-out;
     cursor: pointer;
+    z-index: 1000;
     &:hover{
         background-color:rgba(211, 211, 211, 0.541);
         .arrow_icon > i{
-            color: black;
+            color: $black;
             transform: translateY(-3px);
         }
     }

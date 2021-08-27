@@ -1,0 +1,97 @@
+.menu{
+    position: fixed;
+    height: 100vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include glassMorShadow;
+    z-index: 9999;
+    
+    &_navigation{
+        height: 100vh;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+       @include glassmorphizm;
+        display: flex;
+        flex-direction: column;
+    }
+    &_position{
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        transition: all 0.4s ease;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        cursor: pointer; 
+        position: relative;
+        margin-top: 10px;   
+        &:hover{
+            background-color:rgba(255, 255, 255, 0.63);
+            box-shadow: 2px 2px 4px rgba(211, 211, 211, 0.26);  
+            .icon_container > a > i{
+                transform: scale(1.1);
+                color: $black;
+            }
+            .menu_text > a{
+                color: $black;
+            }
+        }
+        &__nav{
+            margin-bottom: 25px;
+            margin-top: 0px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .icon_container{
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 20px;
+            min-height: 20px;
+            i{
+                transition: all 0.4s ease;
+                @include adaptiv-font(32, 15);
+                color: $icon-white-color;
+            }
+        }
+    }
+    &_text{
+        @include adaptiv-font(25, 15);
+        @extend %Font-Inter;
+        overflow: hidden;
+        transition: all 1s ease;
+        padding: 0px 10px 0px 7px;
+        font-weight: 200;
+        margin-left: -400px;
+        transform: translateX(-25px);
+        opacity: 0;
+        a{
+            color: lightgray;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+    }
+   
+}
+
+.open-menu{
+    margin-left: 0px;
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.active-navigation-tab{
+    background-color:rgba(255, 255, 255, 0.63);
+    box-shadow: 1px 1px 4px rgba(211, 211, 211, 0.26);
+    .icon_container > a > i{
+        transform: scale(1.1);
+        color: $black;
+    }
+    .menu_text > a{
+            color:$black;
+    }
+}
+
+.icon-close{
+    transform: rotate(180deg);
+}
+
