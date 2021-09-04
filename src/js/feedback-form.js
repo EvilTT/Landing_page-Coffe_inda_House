@@ -1,6 +1,13 @@
 const form = document.forms.feedback
 const inputOfContact = document.querySelector('input[type=email]')
 const labelOfContact = document.querySelector('.contact-text')
+const fullName = document.querySelectorAll('input[type=text]')
+const textarea = document.querySelector('TEXTAREA')
+
+const clearInputInForm = () => {
+    [...fullName, textarea, inputOfContact].forEach(item => item.value = '')
+}
+
 
 form.addEventListener('focusout', (event) => {
     if (!event.target.classList.contains('input')) return
@@ -23,3 +30,7 @@ form.addEventListener('change', (event) => {
     }
 })
 
+form.addEventListener('click', function(event){
+    event.preventDefault()
+    if(event.target.classList.contains('clear')) clearInputInForm()
+})
