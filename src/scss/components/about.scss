@@ -1,14 +1,5 @@
 header{
     margin-top: 20px;
-    .load{
-        // width: 100%;
-        // height: 10px;
-        // &_line{
-        //     height: 100%;
-        //     width: 100%;
-        //     background: rgb(93, 190, 93);
-        // }
-    }
     .connecting{
         display: flex;
         justify-content: flex-end;
@@ -21,6 +12,7 @@ header{
             }
         }
         .telephone{
+            @include adaptiv-font(20, 15);
             @extend %Font-Logo;
             margin-right: 20px; 
         }

@@ -1,0 +1,29 @@
+.footer{
+    margin-bottom: 15px;
+}
+.information{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    .telephone{
+        @extend %Font-Logo;
+        @include adaptiv-font(20, 15);
+    }
+    .map, .mail{
+        margin-right: 20px;
+    }
+    .icons{
+        display: flex;
+    }
+    a{
+        i{
+            @include adaptiv-font(45, 15);
+        }
+        color: $black;
+        text-decoration: none;
+        &:hover{
+            color: $icon-white-color;
+        }
+    }
+}
