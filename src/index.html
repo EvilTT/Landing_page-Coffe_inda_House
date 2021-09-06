@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coffee inda House, кофейня Жлобин.">
     <link rel="stylesheet" href="./css/style.min.css">
     <!-- Logo font's -->
     <link rel="preload" href="./fonts/ethnocentric_rg.woff" as="font" crossorigin="anonymous">
@@ -111,10 +112,10 @@
                 <header>
                     <div class="connecting">
                         <div class="telephone">
-                            <a href="tel:+375336664430">+375(33)668-44-30</a>
+                            <a href="tel:+375298488210">+375(29)848-82-10</a>
                         </div>
                         <div class="instargam">
-                            <a href="#">
+                            <a href="https://www.instagram.com/coffee_inda_house/?hl=ru">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -145,6 +146,7 @@
         <!--! aboutt -->
         <section class="" id="aboutt">
             <div class="container">
+                <!-- График работы описание заведения, фото заведения, вайфай, уют и т.д -->
 
             </div>
         </section>
@@ -165,17 +167,17 @@
                 <div class="feedback_container">
 
                     <div class="feedback_form-container">
-                        <form action="" name="feedback">
+                        <form action="#" name="feedback">
 
                             <!--! Имя и Фамилия -->
                             <div class="form_fullname">
                                 <div class="input-container">
-                                    <input required type="text" class="input" name="firstName">
-                                    <label class="input-text">Имя</label>
+                                    <input required id='name' type="text" class="fullName" name="name">
+                                    <label for="name" class="input-text">Имя</label>
                                 </div>
                                 <div class="input-container">
-                                    <input required type="text" class="input" name=lastName">
-                                    <label class="input-text">Фамилия</label>
+                                    <input required id='surname' type="text" class="fullName" name=surname">
+                                    <label for='surname' class="input-text">Фамилия</label>
                                 </div>
                             </div>
                             <!--! Имя и Фамилия -->
@@ -201,8 +203,8 @@
 
                             <div class="contact-input">
                                 <div class="input-container">
-                                    <input required type="email" class="input disabled" name="contact-info">
-                                    <label class="input-text contact-text">E-mail</label>
+                                    <input required id='contact-info' type="email" class="fullName" name="contact-info">
+                                    <label for="contact-info" class="input-text contact-text">E-mail</label>
                                 </div>
                             </div>
 
@@ -213,23 +215,23 @@
                                 </div>
                                 <div class="form_attendance-cont">
                                     <label>
-                                        <input type="radio" name="radio" value="Да"/>
+                                        <input type="radio" name="isVisited" value="Да" />
                                         <span>Да</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="radio" value="Нет"/>
+                                        <input type="radio" name="isVisited" value="Нет" />
                                         <span>Нет</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="radio" value="Нет, но хочу"/>
+                                        <input type="radio" name="isVisited" value="Нет, но хочу" />
                                         <span>Нет, но хочу</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="radio" value="Нет и не хочу"/>
+                                        <input type="radio" name="isVisited" value="Нет и не хочу" />
                                         <span>Нет и не хочу</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="radio" value="Без ответа" checked/>
+                                        <input type="radio" name="isVisited" value="Без ответа" checked />
                                         <span>Без ответа</span>
                                     </label>
                                 </div>
@@ -237,12 +239,24 @@
                             <!--! Были ли  -->
 
                             <div class="message">
-                                <textarea name="text" maxlength="900" minlength="50" required placeholder="Текст.."></textarea>
+                                <textarea name="text-message" maxlength="900" minlength="50" required
+                                    placeholder="Текст.."></textarea>
+                                <div class="privacy-policy">
+                                    <div class="checked">
+                                        <label class="checkbox-ios">
+                                            <input type="checkbox" required>
+                                            <span class="checkbox-ios-switch"></span>
+                                        </label>
+                                    </div>
+                                    <div class="pc-text">
+                                        Я даю свое согласие на обработку персональных данных в соотвестсвии с <a href="./pc.html" target="_blank">Политикой конфиденциальности</a>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="buttons-form">
-                                <a href="#" class="submit">Отправить<i class="far fa-paper-plane"></i></a>
-                                <a href="#" class="clear">Отчистить <i class="fas fa-broom"></i></a>
+                                <a href="#" class="submit">Отправить<i class="far fa-envelope-open"></i></a>
+                                <a href="#" class="clear">Отчистить <i class="fas fa-eraser"></i></a>
                             </div>
 
                         </form>
@@ -251,7 +265,8 @@
                     <div class="feedback_text-title">
                         <div class="title">feedback</div>
                         <p> Если у вас есть какие-либо вопросы или вы хотите оставить свои пожелания и отзывы, вы можете
-                            написать нам в <a href="#">Instagram</a> или, заполнив форму, отпавить нам письмо.</p>
+                            написать нам в <a href="https://www.instagram.com/coffee_inda_house/?hl=ru">Instagram</a>
+                            или, заполнив форму, отправить нам письмо.</p>
                     </div>
                 </div>
             </div>
@@ -270,7 +285,7 @@
             <div class="container">
                 <div class="information">
                     <div class="telephone">
-                        <a href="tel:+375336664430">+375(33)668-44-30</a>
+                        <a href="tel:+375298488210">+375(29)848-82-10</a>
                     </div>
                     <div class="icons">
                         <div class="map">
@@ -284,7 +299,7 @@
                             </a>
                         </div>
                         <div class="instargam">
-                            <a href="#">
+                            <a href="https://www.instagram.com/coffee_inda_house/?hl=ru">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>

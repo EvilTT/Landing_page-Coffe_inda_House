@@ -31,6 +31,15 @@ form.addEventListener('change', (event) => {
 })
 
 form.addEventListener('click', function(event){
-    event.preventDefault()
-    if(event.target.classList.contains('clear')) clearInputInForm()
+    if(event.target.classList.contains('clear')){
+        event.preventDefault()
+        clearInputInForm(  )
+        return
+    }
+    if(event.target.classList.contains('submit')){
+        event.preventDefault()
+        form.submit()
+        
+    }
 })
+

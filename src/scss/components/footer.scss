@@ -8,7 +8,7 @@
     padding: 20px;
     .telephone{
         @extend %Font-Logo;
-        @include adaptiv-font(20, 15);
+        @include adaptiv-font(20, 10);
     }
     .map, .mail{
         margin-right: 20px;

@@ -41,9 +41,8 @@ document.body.addEventListener('click', (event) => {
         } 0%, ${gradienBAckground[numberOfGradient - 1][1]} 33%, ${
             gradienBAckground[numberOfGradient - 1][2]
         } 66%, ${gradienBAckground[numberOfGradient - 1][3]} 100%)`
-        console.log(event.target)
         return
-    }
+    }   
 })
 
 // let mySwiper = new Swiper('.swiper-container', {

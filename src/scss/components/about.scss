@@ -12,7 +12,7 @@ header{
             }
         }
         .telephone{
-            @include adaptiv-font(20, 15);
+            @include adaptiv-font(20, 10);
             @extend %Font-Logo;
             margin-right: 20px; 
         }
@@ -35,13 +35,13 @@ header{
         border-bottom-left-radius: 10px;
         h1{
             @extend %Font-Logo;
-            @include adaptiv-font(105, 20);
+            @include adaptiv-font(105, 40);
             text-transform: uppercase;
             color: $black;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
         }
         p{
-            max-width: 600px;
+            max-width: 700px;
             font-weight: 200;
             color: rgb(253, 253, 253);
             margin-top: 35px;
@@ -51,6 +51,7 @@ header{
         }   
         .btn{
             margin-top: 45px;
+            display: inline-block;
             a{
             text-decoration: none;
             border-radius: 5px;
@@ -75,6 +76,7 @@ header{
         
     }
     &_image{
+        padding-left: 30px;
         margin-top: 80px;
         animation: up 1.8s linear 0.5s infinite alternate;
         border-top-right-radius: 10px;
