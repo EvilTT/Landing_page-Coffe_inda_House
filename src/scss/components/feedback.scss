@@ -32,7 +32,7 @@
         @extend %Font-Inter;
         font-weight: 400;
         outline: none;
-        background-color: transparent;
+        background-color: transparent !important;
         transition: 0.3s;
         &:focus, &:hover{
             @include glassMorShadow;
@@ -348,4 +348,9 @@ $text-color: mix(#000, $primary-color, 64%);
     }      
 }
 
+.input-container{
+    ._error-validation{
+        border: 2px solid #FF3008;
+    }
+}
 

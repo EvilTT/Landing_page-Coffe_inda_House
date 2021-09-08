@@ -8,13 +8,12 @@
     <meta name="description" content="Coffee inda House, кофейня Жлобин.">
     <link rel="stylesheet" href="./css/style.min.css">
     <!-- Logo font's -->
-    <link rel="preload" href="./fonts/ethnocentric_rg.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Ethnocentric-Regular.ttf" as="font" crossorigin="anonymous">
     <!--! Swiper -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <!--! Swiper -->
     <script defer src="./js/index.min.js"></script>
     <script defer src="./js/scroll-navigation.min.js"></script>
-    <!-- async -->
     <script defer src="./js/feedback-form.min.js"></script>
     <!--? Swiper -->
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
@@ -24,6 +23,25 @@
 </head>
 
 <body>
+    <div class="load">
+        <div class="windows8">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+    </div>
     <!--! Scroll to top -->
     <div class="arrow_container" tabindex="0">
         <a href="#top" tabindex="-1">
@@ -172,11 +190,11 @@
                             <!--! Имя и Фамилия -->
                             <div class="form_fullname">
                                 <div class="input-container">
-                                    <input required id='name' type="text" class="fullName" name="name">
+                                    <input id='name' type="text" class="fullName" data-req='req' name="name">
                                     <label for="name" class="input-text">Имя</label>
                                 </div>
                                 <div class="input-container">
-                                    <input required id='surname' type="text" class="fullName" name=surname">
+                                    <input id='surname' type="text" class="fullName" data-req='req' name="surname">
                                     <label for='surname' class="input-text">Фамилия</label>
                                 </div>
                             </div>
@@ -203,7 +221,7 @@
 
                             <div class="contact-input">
                                 <div class="input-container">
-                                    <input required id='contact-info' type="email" class="fullName" name="contact-info">
+                                    <input id='contact-info' type="email" class="fullName" data-req='req' name="contact-info">
                                     <label for="contact-info" class="input-text contact-text">E-mail</label>
                                 </div>
                             </div>
@@ -239,12 +257,12 @@
                             <!--! Были ли  -->
 
                             <div class="message">
-                                <textarea name="text-message" maxlength="900" minlength="50" required
+                                <textarea name="text-message" maxlength="900" minlength="50"
                                     placeholder="Текст.."></textarea>
                                 <div class="privacy-policy">
                                     <div class="checked">
                                         <label class="checkbox-ios">
-                                            <input type="checkbox" required>
+                                            <input type="checkbox" name="privacy-policy" checked data-req='req'>
                                             <span class="checkbox-ios-switch"></span>
                                         </label>
                                     </div>
