@@ -1,5 +1,7 @@
 <?php
-$to = "mega.zava199@gmail.com";
+
+// Переменные, которые отправляет пользователь
+
 $name = $_POST['name'];
 $surname = $_POST['surname'];
 

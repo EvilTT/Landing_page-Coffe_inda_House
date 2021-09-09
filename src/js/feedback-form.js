@@ -82,7 +82,7 @@ const toMail = dataForm => {
             console.log(response.json());
             console.log('Okey');
         }else{
-            throw new Error('ПРоизошла ошибка')
+            throw new Error('Произошла ошибка')
         }
     }).catch(err => generateModal(err.message))
 }
