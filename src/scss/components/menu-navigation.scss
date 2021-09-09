@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         padding: 10px 0px;
-        transition: all 0.4s ease;
+        transition: all 0.1s linear;
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
         cursor: pointer; 
@@ -40,6 +40,9 @@
             margin-top: 0px;
             display: flex;
             justify-content: flex-end;
+            i{
+                transition: all 0.5s linear;
+            }
             &:hover{
                 background-color:rgba(211, 211, 211, 0.541);
             }
@@ -51,7 +54,7 @@
             min-width: 20px;
             min-height: 20px;
             i{
-                transition: all 0.4s ease;
+                transition: all 0.1s linear;
                 @include adaptiv-font(32, 15);
                 color: $icon-white-color;
             }
@@ -61,7 +64,7 @@
         @include adaptiv-font(25, 15);
         @extend %Font-Inter;
         overflow: hidden;
-        transition: all 1s ease;
+        transition: all 0.5s linear;
         padding: 0px 10px 0px 7px;
         font-weight: 200;
         margin-left: -400px;

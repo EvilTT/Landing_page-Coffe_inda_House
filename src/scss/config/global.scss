@@ -21,9 +21,8 @@ body{
     background-size: cover;
     background-color: rgb(49,191,255);
     background: linear-gradient(90deg, rgba(49,191,255,1) 0%, rgba(82,103,255,1) 25%, rgba(246,110,232,1) 50%, rgba(237,77,228,1) 75%, rgba(149,0,247,1) 100%);
-    transition: all 0.5s ease-out;
+    transition: all 0.3s linear;
     position: relative;
-    transition: all 0.1s;
     .load{
         visibility: hidden;
         z-index: 9998;
@@ -83,62 +82,6 @@ body{
         .windows8 #wBall_5 {
             animation-delay: 1.22s;
         }
-        
-        
-        
-        @keyframes orbit {
-            0% {
-                opacity: 1;
-                z-index:99;
-                transform: rotate(180deg);
-                animation-timing-function: ease-out;
-            }
-        
-            7% {
-                opacity: 1;
-                transform: rotate(300deg);
-                animation-timing-function: linear;
-                origin:0%;
-            }
-        
-            30% {
-                opacity: 1;
-                transform:rotate(410deg);
-                animation-timing-function: ease-in-out;
-                origin:7%;
-            }
-        
-            39% {
-                opacity: 1;
-                transform: rotate(645deg);
-                animation-timing-function: linear;
-                origin:30%;
-            }
-        
-            70% {
-                opacity: 1;
-                transform: rotate(770deg);
-                animation-timing-function: ease-out;
-                origin:39%;
-            }
-        
-            75% {
-                opacity: 1;
-                transform: rotate(900deg);
-                animation-timing-function: ease-out;
-                origin:70%;
-            }
-        
-            76% {
-            opacity: 0;
-                transform:rotate(900deg);
-            }
-        
-            100% {
-            opacity: 0;
-                transform: rotate(900deg);
-            }
-        }
     }
 }
 
@@ -186,3 +129,57 @@ section{
 }
 
 //! Scrollbar 
+
+@keyframes orbit {
+    0% {
+        opacity: 1;
+        z-index:99;
+        transform: rotate(180deg);
+        animation-timing-function: ease-out;
+    }
+
+    7% {
+        opacity: 1;
+        transform: rotate(300deg);
+        animation-timing-function: linear;
+        origin:0%;
+    }
+
+    30% {
+        opacity: 1;
+        transform:rotate(410deg);
+        animation-timing-function: ease-in-out;
+        origin:7%;
+    }
+
+    39% {
+        opacity: 1;
+        transform: rotate(645deg);
+        animation-timing-function: linear;
+        origin:30%;
+    }
+
+    70% {
+        opacity: 1;
+        transform: rotate(770deg);
+        animation-timing-function: ease-out;
+        origin:39%;
+    }
+
+    75% {
+        opacity: 1;
+        transform: rotate(900deg);
+        animation-timing-function: ease-out;
+        origin:70%;
+    }
+
+    76% {
+    opacity: 0;
+        transform:rotate(900deg);
+    }
+
+    100% {
+    opacity: 0;
+        transform: rotate(900deg);
+    }
+}

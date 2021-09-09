@@ -19,11 +19,15 @@
 }
 
 .input-container{
+    width: 100%;
+    max-width: 500px;
     position: relative;
     &:nth-child(2){
         margin-left: 20px;
     }
     .fullName{
+        width: 100%;
+        min-width: 350px;
         padding: 10px;
         border-radius: 7px;
         color: $black;
@@ -91,7 +95,7 @@
     display: flex;
     justify-content: center;
     input{
-        width: 500px;
+        width: 100%;
     }
 }
 
@@ -132,7 +136,7 @@
         outline: none;
         background-color: transparent;
         resize: none;
-        transition: 0.3s;
+        transition: 0.1s linear;
         &:hover, &:focus{
             @include glassMorShadow;
         }
@@ -233,7 +237,7 @@
         @include adaptiv-font(25, 10);
         @include glassMorShadow;
         @extend %Font-Inter;   
-        transition: all 0.3s ease;
+        transition: all 0.1s linear;
         i{
             @include adaptiv-font(25, 10);
             color: white;
@@ -278,6 +282,7 @@
     padding-left: 30px;
     @include adaptiv-font(25, 15);
     line-height: 25px;
+    // min-width: 450px;
     .title{
         text-transform: uppercase;
         @extend %Font-Logo;
@@ -288,7 +293,6 @@
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
     }
     a{
-        text-decoration: none;
         color: $black;
         font-weight: 600;
     }

@@ -63,7 +63,7 @@ header{
             font-weight: 200;
             @include adaptiv-font(25, 15);
             @extend %Font-Inter;   
-            transition: all 0.3s ease;
+            transition: all 0.1s linear;
             i{
                 color: $black;
                 text-shadow: none;
