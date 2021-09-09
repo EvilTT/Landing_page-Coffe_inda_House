@@ -1,8 +1,8 @@
 <?php
 // Файлы phpmailer
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
-require 'PHPMailer/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
