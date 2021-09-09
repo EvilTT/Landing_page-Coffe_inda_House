@@ -13,9 +13,10 @@ const clearInputInForm = () => {
     form.reset()
 }
 
-// const generateModal = () => {
-//     let modal = document.createElement('div')
-// }
+const generateModal = (message) => {
+    let modal = document.createElement('div')
+    console.log(message);
+}
 
 form.addEventListener('focusout', (event) => {
     if (!event.target.classList.contains('fullName')) return
@@ -67,16 +68,10 @@ const validateError = (errorsFiel) => {
     errorsFiel.focus()
 }
 
-const errorMessage = () => {
-    console.log('Error');
-}
+
 const toMail = dataForm => {
     let formData = new FormData(dataForm)
-    // let data = {}
-    // for(let item of formData.entries()){
-    //     let [key, value] = item
-    //     data[key] = value
-    // }
+   
     fetch('mail.php', {
         body: formData,
         method: 'POST'
@@ -87,9 +82,9 @@ const toMail = dataForm => {
             console.log(response.json());
             console.log('Okey');
         }else{
-            errorMessage()
+            throw new Error('ПРоизошла ошибка')
         }
-    })
+    }).catch(err => generateModal(err.message))
 }
 
 const formValidation = () => {

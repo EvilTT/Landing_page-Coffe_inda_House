@@ -1,72 +1,55 @@
 <?php
-// Файлы phpmailer
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
-require 'PHPMailer/Exception.php';
-
-// Переменные, которые отправляет пользователь
+$to = "mega.zava199@gmail.com";
 $name = $_POST['name'];
 $surname = $_POST['surname'];
-$email = $_POST['contact-info'];
-$text = $_POST['text-message'];
-$file = $_FILES['myfile'];
+
+$contact = $_POST['contact']; // no
+
+$telOrEmal = $_POST['contact-info'];
 $isVisited = $_POST['isVisited'];
+$messageForm = $_POST['text-message'];
+$pc = $_POST['privacy-policy'];
 
-// Формирование самого письма
-$title = "Coffe inda House - Форма обратной связи";
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Фамилия:</b> $surname<br>
-<b>$contact:</b> $email<br><br>
-<b>Посещал заведение Coffe inda House:</b> $isVisited<br>
-<b>Сообщение:</b><br>$text
-";
+$message = '
+<html>
+<body>
+<center>	
+<table border=1 cellpadding=6 cellspacing=0 width=90% bordercolor="#DBDBDB">
+ <tr><td colspan=2 align=center bgcolor="#E4E4E4"><b>Информация</b></td></tr>
+ <tr>
+  <td><b>Откуда</b></td>
+  <td>Coffee inda House</td>
+ </tr>
+ <tr>
+  <td><b>Адресат</b></td>
+  <td>'.$name. $surname.'</td>
+ </tr>
+ <tr>
+  <td><b>Контакты</b></td>
+  <td>'.$telOrEmal.'</td>
+ </tr>
+ <tr>
+  <td><b>Сообщение</b></td>
+  <td>'.$messageForm.'</td>
+ </tr>
+ <tr>
+  <td><b>Был у нас?</b></td>
+  <td>'.$isVisited.'</td>
+ </tr>
+ <tr>
+  <td><b>Ознакоплен с политикой конфиденциальности</b></b></td>
+  <td>'.$pc.'</td>
+ </tr>
+</table>
+</center>	
+</body>
+</html>
+';
+$subject = "Coffee inda house - Форма обратной связи связи";
 
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-try {
-    $mail->isSMTP();   
-    $mail->CharSet = "UTF-8";
-    $mail->SMTPAuth   = true;
-    $mail->SMTPDebug = 2;
-    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+$headers  = "Content-type: text/html; charset=utf-8\r\n";
+$headers .= "From: Отправитель <from@example.com>\r\n";
 
-    // Настройки вашей почты
-    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'zavadskijmaxim@yandex.by'; // Логин на почте
-    $mail->Password   = 'vomwbhkhpbufhluh'; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('zavadskijmaxim@yandex.by', 'Coffee inda House - Mail Server'); // Адрес самой почты и имя отправителя
-
-    // Получатель письма
-    $mail->addAddress('coffee.inda.house@yandex.by');  
-
-    if (!empty($file['name'][0])) {
-        for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-            $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-            $filename = $file['name'][$ct];
-            if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-                $mail->addAttachment($uploadfile, $filename);
-                $rfile[] = "Файл $filename прикреплён";
-            } else {
-                $rfile[] = "Не удалось прикрепить файл $filename";
-            }
-        }   
-    }
-    // Отправка сообщения
-    $mail->isHTML(true);
-    $mail->Subject = $title;
-    $mail->Body = $body;    
-    
-    // Проверяем отравленность сообщения
-    if ($mail->send()) {$result = "success";} 
-    else {$result = "error";}
-    
-    } catch (Exception $e) {
-        $result = "error";
-        $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
-    }
-// Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+$result = mail($to, $subject, $message, $headers);
+print_r($result)
+?>      
