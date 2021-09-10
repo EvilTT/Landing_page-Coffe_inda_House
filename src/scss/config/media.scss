@@ -117,7 +117,7 @@
 }
 
 
-@media(max-width: 801px){
+@media(max-width: 848px){
     .feedback_text-title{
         margin-top: 7px;
     }
@@ -226,6 +226,22 @@
     }
 }
 //! Feedback Section 
+
+//! Map 
+@media(max-width: 676px){
+    .location{
+        padding: 10px;
+        &_accordeon{
+            width: 100%;
+        }
+    }
+}
+@media(max-width: 466px){
+    .location{
+        padding: 10px 0px 0px 0px;
+    }
+}
+//! Map 
 
 //! Footer 
 

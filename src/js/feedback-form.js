@@ -41,11 +41,13 @@ form.addEventListener('change', (event) => {
 
 form.addEventListener('click', function (event) {
     if (event.target.classList.contains('clear')) {
+        clickAnimation(event.target)
         event.preventDefault()
         clearInputInForm()
         return
     }
     if (event.target.classList.contains('submit')) {
+        clickAnimation(event.target)
         event.preventDefault()
         formValidation()
     }

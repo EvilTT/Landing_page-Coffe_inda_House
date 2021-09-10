@@ -5,6 +5,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -346,24 +348,6 @@ template {
   font-style: normal;
   font-weight: normal;
   src: local("Ethnocentric-Regular"), url("/fonts/Ethnocentric-Regular.ttf") format("opentype");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Inter-Regular"), url("/fonts/Inter-Regular.ttf") format("opentype");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 200;
-  src: local("Inter-ExtraLight"), url("/fonts/Inter-ExtraLight.ttf") format("opentype");
-}
-@font-face {
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Manrope-Light"), url("/fonts/Manrope-Light.ttf") format("opentype");
 }
 .location_accordeon .accordion-item .accordion-item-content, .form_attendance label span, .form_you-contact label span, .feedback_text-title, .buttons-form .submit, .buttons-form .clear, .message .privacy-policy .pc-text, .message textarea, .form_attendance-title, .title-contact, .input-container .fullName, .about-title_text .btn a, .about-title_text p, .menu_text {
   font-family: "Inter", sans-serif;
@@ -7475,21 +7459,17 @@ header .connecting .instargam a {
 .location {
   padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  background: rgba(66, 66, 66, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
   border: none;
-  background-color: #d4d4d4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -7497,33 +7477,38 @@ header .connecting .instargam a {
 .location_accordeon {
   width: 550px;
   border-radius: 10px;
-  background: #e3e3e3;
-  background: -o-linear-gradient(305deg, #bfbfbf, #e3e3e3);
-  background: linear-gradient(145deg, #bfbfbf, #e3e3e3);
-  -webkit-box-shadow: 13px 13px 26px #aaaaaa, -13px -13px 26px #fefefe;
-          box-shadow: 13px 13px 26px #aaaaaa, -13px -13px 26px #fefefe;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(66, 66, 66, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.37);
 }
 .location_accordeon .accordion-item {
   padding: 10px;
   border-radius: 10px;
+  position: relative;
 }
 .location_accordeon .accordion-item .accordion-item-header {
-  font-size: calc( 25px + 10 * ((100vw - 320px) / 1600) );
+  font-size: calc( 20px + 15 * ((100vw - 320px) / 1600) );
   cursor: pointer;
   color: #2B2B2B;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: 300;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-shadow: 1px -1px 4px rgba(0, 0, 0, 0.432);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.432);
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  position: relative;
 }
 .location_accordeon .accordion-item .accordion-item-header i {
   -webkit-transition: 0.2s;
@@ -7535,18 +7520,18 @@ header .connecting .instargam a {
           box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.9);
   font-size: calc( 15px + 10 * ((100vw - 320px) / 1600) );
   margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.185);
   border-radius: 5px;
-  background: #e3e3e3;
-  background: -o-linear-gradient(305deg, #bfbfbf, #e3e3e3);
-  background: linear-gradient(145deg, #bfbfbf, #e3e3e3);
+  font-weight: 300;
   padding: 10px;
-  color: #2B2B2B;
+  color: black;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
   display: none;
 }
 .location_accordeon .accordion-item .accordion-item-content a {
+  font-weight: 400;
   color: black;
 }
 .location_container {
@@ -7555,7 +7540,7 @@ header .connecting .instargam a {
 }
 
 .accordion-item.show {
-  background-color: #979797;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .accordion-item.show .accordion-item-header > i {
   -webkit-transform: rotate(180deg);
@@ -7711,7 +7696,7 @@ header .connecting .instargam a {
     padding-bottom: 20px;
   }
 }
-@media (max-width: 801px) {
+@media (max-width: 848px) {
   .feedback_text-title {
     margin-top: 7px;
   }
@@ -7832,6 +7817,19 @@ header .connecting .instargam a {
   .feedback_text-title p {
     text-align: justify;
     font-size: 13px;
+  }
+}
+@media (max-width: 676px) {
+  .location {
+    padding: 10px;
+  }
+  .location_accordeon {
+    width: 100%;
+  }
+}
+@media (max-width: 466px) {
+  .location {
+    padding: 10px 0px 0px 0px;
   }
 }
 @media (max-width: 320px) {

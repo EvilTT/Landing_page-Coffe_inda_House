@@ -1,32 +1,33 @@
 .location{
     padding: 20px;
     border-radius: 10px;
-    @include glassMorShadow;
-    @include glassmorphizm;
     border: none;
-    background-color: #d4d4d4;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column-reverse;
     align-items: center;
     &_accordeon{
         width: 550px;
         border-radius: 10px;
-        background: #e3e3e3;
-        background: linear-gradient(145deg, #bfbfbf, #e3e3e3);
-        box-shadow:  13px 13px 26px #aaaaaa, -13px -13px 26px #fefefe;
+        @include glassMorShadow;
+        @include glassmorphizm;
+        background-color: rgba(255, 255, 255, 0.37);
         .accordion-item{
             padding: 10px;
             border-radius: 10px;
+            position: relative;
             .accordion-item-header{
-                @include adaptiv-font(35,25);
+                @include adaptiv-font(35,20);
                 @extend %Font-Monrope;
                 cursor: pointer;
                 color: $black;
                 display: flex;
+                font-weight: 300;
                 justify-content: space-between;
                 align-items: center;
-                text-shadow: 1px -1px 4px rgba(0, 0, 0, 0.432);
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.432);
                 transition: 0.2s;
+                position: relative;
                 i{
                     transition: 0.2s;
                 }
@@ -36,20 +37,20 @@
                 @include adaptiv-font(25,15);
                 @extend %Font-Inter;
                 margin-top: 10px;
+                background-color: rgba(0, 0, 0, 0.185);
                 border-radius: 5px;
-                background: #e3e3e3;
-                background: linear-gradient(145deg, #bfbfbf, #e3e3e3);  
+                font-weight: 300;
                 padding: 10px;    
-                color: $black;
+                color: black;
                 transition: 0.2s;
                 a{
+                    font-weight: 400;
                     color: black;
                 }  
                 display: none;
                 
             }
         }
-        
     }
     &_container{
         padding: 10px;
@@ -59,7 +60,7 @@
 }
 
 .accordion-item.show{
-    background-color: darken(#e3e3e3, $amount: 30);
+    background-color:rgba(255, 255, 255, 0.5);
     .accordion-item-header >i{
         transform: rotate(180deg);
     }
@@ -67,3 +68,4 @@
         display: block;
     }
 }
+
