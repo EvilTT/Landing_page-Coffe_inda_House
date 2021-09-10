@@ -35,7 +35,7 @@ header{
         border-bottom-left-radius: 10px;
         h1{
             @extend %Font-Logo;
-            @include adaptiv-font(105, 40);
+            @include adaptiv-font(105, 45);
             text-transform: uppercase;
             color: $black;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
@@ -61,7 +61,7 @@ header{
             box-shadow: 1px 1px 4px rgba(59, 59, 59, 0.26);
             color: $black;
             font-weight: 200;
-            @include adaptiv-font(25, 15);
+            @include adaptiv-font(25, 20);
             @extend %Font-Inter;   
             transition: all 0.1s linear;
             i{

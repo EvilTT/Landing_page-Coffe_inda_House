@@ -38,20 +38,11 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        padding-bottom: 50px;
         &_text{
             text-align: center;
             margin-top: 50px;
-            padding-left: 20px;
-            padding-right: 20px;
-            h1{
-                text-align: center;
-            }
-            p{
-                text-align: center;
-            }
-            .btn{
-                text-align: center;
-            }
+            padding: 0px 10px;
         }
         &_image{
             position: absolute;
@@ -70,7 +61,7 @@
             justify-content: space-between;
             align-items: center;
             .telephone{
-                @include adaptiv-font(20, 10);
+                @include adaptiv-font(20, 20);
                 @extend %Font-Logo;
                 margin-right: 10px;
                 margin-left: 15px; 
@@ -117,9 +108,6 @@
     .feedback_text-title{
         margin-top: 15px;
         padding: 0px 5px;
-        .title{
-            @include adaptiv-font(80, 15);
-        }
         p{
             text-align: center;
             max-width: 750px;
@@ -176,9 +164,6 @@
     .feedback_text-title{
         padding-left: 0px;
         margin-top: 15px;
-        .title{
-            @include adaptiv-font(100, 15);
-        }
     }
     .message{
         .privacy-policy{
@@ -204,9 +189,6 @@
     }
     .feedback_text-title{
         line-height: 20px;
-        .title{
-            padding-bottom: 10px;
-        }
         p{
             padding: 0px 5px 10px 5px;
             text-align: center;
@@ -215,22 +197,6 @@
     .form_attendance-cont{
         flex-direction: column;
         align-items: flex-start
-    }
-}
-
-@media(max-width: 375px){
-    .feedback_form-container{
-        padding: 20px 10px 10px 10px;
-    }
-    .feedback_text-title{
-        line-height: 17px;
-        .title{
-            @include adaptiv-font(30, 25);
-        }
-        p{
-            text-align: justify;
-            font-size: 13px;
-        }
     }
     .buttons-form{
         margin-top: 10px;
@@ -243,6 +209,19 @@
         .clear{
             margin-top: 10px;
             padding: 10px 15px;
+        }
+    }
+}
+
+@media(max-width: 375px){
+    .feedback_form-container{
+        padding: 20px 10px 10px 10px;
+    }
+    .feedback_text-title{
+        line-height: 17px;
+        p{
+            text-align: justify;
+            font-size: 13px;
         }
     }
 }

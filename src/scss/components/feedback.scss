@@ -53,8 +53,8 @@
         position: absolute;
         z-index: -1;
         left: 10px;
-        top: 15px;
-        @include adaptiv-font(23, 10);
+        top: 12px;
+        @include adaptiv-font(23, 15);
         @extend %Font-Monrope;
         font-weight: 300;
         color: $black;
@@ -102,7 +102,7 @@
 .form_attendance{
     margin-top: 40px;
     &-title{
-        @include adaptiv-font(25, 15);
+        @include adaptiv-font(25, 20);
         @extend %Font-Inter;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
         text-align: center;
@@ -234,12 +234,12 @@
         box-shadow: 1px 1px 4px rgba(189, 189, 189, 0.26);
         color: white;
         font-weight: 200;
-        @include adaptiv-font(25, 10);
+        @include adaptiv-font(20, 15);
         @include glassMorShadow;
         @extend %Font-Inter;   
         transition: all 0.1s linear;
         i{
-            @include adaptiv-font(25, 10);
+            @include adaptiv-font(20, 15);
             color: white;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
         }
@@ -257,13 +257,13 @@
         box-shadow: 1px 1px 4px rgba(189, 189, 189, 0.26);
         color: white;
         font-weight: 200;
-        @include adaptiv-font(25, 10);
+        @include adaptiv-font(20, 15);
         @include glassMorShadow;
         @extend %Font-Inter;   
         transition: all 0.3s ease;
         border: none;
         i{
-            @include adaptiv-font(25, 10);
+            @include adaptiv-font(20, 15);
             margin-left: 5px;
             color: white;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
