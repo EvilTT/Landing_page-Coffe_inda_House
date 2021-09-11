@@ -55,13 +55,13 @@
             min-height: 20px;
             i{
                 transition: all 0.1s linear;
-                @include adaptiv-font(32, 15);
+                @include adaptiv-font(32, 20);
                 color: $icon-white-color;
             }
         }
     }
     &_text{
-        @include adaptiv-font(25, 15);
+        @include adaptiv-font(25, 20);
         @extend %Font-Inter;
         overflow: hidden;
         transition: all 0.5s linear;

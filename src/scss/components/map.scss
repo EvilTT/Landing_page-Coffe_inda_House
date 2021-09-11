@@ -4,8 +4,8 @@
     border: none;
     display: flex;
     justify-content: space-between;
-    flex-direction: column-reverse;
-    align-items: center;
+    // flex-direction: column-reverse;
+    // align-items: center;
     &_accordeon{
         width: 550px;
         border-radius: 10px;
@@ -13,10 +13,9 @@
         @include glassmorphizm;
         background-color: rgba(255, 255, 255, 0.37);
         .accordion-item{
-            padding: 10px;
             border-radius: 10px;
-            position: relative;
             .accordion-item-header{
+                padding: 10px;
                 @include adaptiv-font(35,20);
                 @extend %Font-Monrope;
                 cursor: pointer;
@@ -28,17 +27,17 @@
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.432);
                 transition: 0.2s;
                 position: relative;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
                 i{
                     transition: 0.2s;
                 }
             }
             .accordion-item-content{
-                box-shadow: inset 0px 0px 5px rgba(0,0,0,0.9);
                 @include adaptiv-font(25,15);
                 @extend %Font-Inter;
-                margin-top: 10px;
-                background-color: rgba(0, 0, 0, 0.185);
-                border-radius: 5px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
                 font-weight: 300;
                 padding: 10px;    
                 color: black;
@@ -48,7 +47,6 @@
                     color: black;
                 }  
                 display: none;
-                
             }
         }
     }
@@ -60,12 +58,15 @@
 }
 
 .accordion-item.show{
-    background-color:rgba(255, 255, 255, 0.5);
+    .accordion-item-header{
+        background-color:rgba(255, 255, 255, 0.5);
+    }
     .accordion-item-header >i{
         transform: rotate(180deg);
     }
     .accordion-item-content{
         display: block;
+        border: 1.5px solid rgba(255, 255, 255, 0.5);
     }
 }
 

@@ -33,7 +33,16 @@
     }
 }
 
-@media(max-width: 480px){
+@media(max-width: 560px){
+    header{
+        .connecting{
+            justify-content: space-between;
+            .telephone{
+                margin-right: 0px;
+                margin-left: 30px;
+            }
+        }
+    }
     .about-title{
         flex-direction: column;
         justify-content: center;
@@ -43,6 +52,11 @@
             text-align: center;
             margin-top: 50px;
             padding: 0px 10px;
+            .btn{
+               a{
+                padding: 15px 20px;
+               }
+            }
         }
         &_image{
             position: absolute;
@@ -61,7 +75,6 @@
             justify-content: space-between;
             align-items: center;
             .telephone{
-                @include adaptiv-font(20, 20);
                 @extend %Font-Logo;
                 margin-right: 10px;
                 margin-left: 15px; 
@@ -84,16 +97,15 @@
             p{
                 font-size: 12px;
             }
-            .btn{
-                margin-top: 25px;
-                padding: 10px 5px;
-            }
         }
     }
 }
 
 //! About Section 
 
+//! Cafe-menu 
+
+//! Cafe-menu 
 
 
 //! Feedback Section 
@@ -245,7 +257,7 @@
 
 //! Footer 
 
-@media(max-width: 320px){
+@media(max-width: 450px){
     .footer{
         margin-bottom: 10px;
     }
@@ -257,25 +269,7 @@
         padding: 10px;
         .telephone{
             padding-top: 5px;
-            padding-bottom: 5px;
-            @extend %Font-Logo;
-            @include adaptiv-font(20, 10);
-        }
-        .map, .mail{
-            margin-right: 15px;
-        }
-        .icons{
-            display: flex;
-        }
-        a{
-            i{
-                @include adaptiv-font(45, 15);
-            }
-            color: $black;
-            text-decoration: none;
-            &:hover{
-                color: $icon-white-color;
-            }
+            padding-bottom: 10px;
         }
     }
 }

@@ -23,6 +23,7 @@ document.body.addEventListener('click', (event) => {
     }
     //! Random gradient background
     if (btnColor.contains(event.target)) {
+        event.preventDefault()
         const gradienBAckground = [
             ['#845EC2', '#B39CD0', '#FBEAFF', '#00C9A7'],
             ['#845EC2', '#B0A8B9', '#C34A36', '#BEA6A0'],
@@ -36,7 +37,7 @@ document.body.addEventListener('click', (event) => {
         let numberOfGradient = Math.round(
             Math.random() * (gradienBAckground.length - 1) + 1
         )
-        document.body.style.background = `linear-gradient(90deg, ${
+        document.body.style.background = `linear-gradient(147deg, ${
             gradienBAckground[numberOfGradient - 1][0]
         } 0%, ${gradienBAckground[numberOfGradient - 1][1]} 33%, ${
             gradienBAckground[numberOfGradient - 1][2]

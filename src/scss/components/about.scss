@@ -12,14 +12,14 @@ header{
             }
         }
         .telephone{
-            @include adaptiv-font(20, 10);
+            @include adaptiv-font(20, 12);
             @extend %Font-Logo;
             margin-right: 20px; 
         }
         .instargam{
             margin-right: 30px; 
             a{
-                @include adaptiv-font(45, 15);
+                @include adaptiv-font(45, 20);
             }
         }
     }
@@ -61,7 +61,7 @@ header{
             box-shadow: 1px 1px 4px rgba(59, 59, 59, 0.26);
             color: $black;
             font-weight: 200;
-            @include adaptiv-font(25, 20);
+            @include adaptiv-font(25, 15);
             @extend %Font-Inter;   
             transition: all 0.1s linear;
             i{
