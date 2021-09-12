@@ -1,7 +1,7 @@
 node_modules/
 .idea
 .vscode
-# build
+build
 logotips
 сжатые img
 finish.txt

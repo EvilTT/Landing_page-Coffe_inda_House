@@ -7053,18 +7053,28 @@ header .connecting .instargam a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-left: 10%;
+}
+@media screen and (max-width: 1054px) {
+  .catalog_slider {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0px;
+  }
 }
 
 .blog-slider {
   width: 90%;
   position: relative;
   max-width: 1000px;
-  background: #fff;
-  -webkit-box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-          box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  background: rgba(66, 66, 66, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: rgba(255, 255, 255, 0.37);
   padding: 25px;
   border-radius: 25px;
   height: 350px;
@@ -7078,11 +7088,13 @@ header .connecting .instargam a {
     height: 400px;
   }
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 1054px) {
   .blog-slider {
     min-height: 500px;
     height: auto;
+    margin-left: 0px;
     margin: 180px auto;
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-height: 500px) and (min-width: 992px) {
@@ -7098,7 +7110,7 @@ header .connecting .instargam a {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 1054px) {
   .blog-slider__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -7220,7 +7232,7 @@ header .connecting .instargam a {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 1054px) {
   .blog-slider__img {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
@@ -7241,9 +7253,9 @@ header .connecting .instargam a {
 .blog-slider__content {
   padding-right: 25px;
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 1054px) {
   .blog-slider__content {
-    margin-top: -80px;
+    margin-top: -120px;
     text-align: center;
     padding: 0 30px;
   }
@@ -7263,19 +7275,41 @@ header .connecting .instargam a {
   transition: all 0.4s;
 }
 .blog-slider__code {
+  font-size: 20px;
   color: #7b7992;
-  margin-bottom: 15px;
-  display: block;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 500;
 }
+.blog-slider__code .price {
+  margin-left: 30px;
+}
+@media screen and (max-width: 1054px) {
+  .blog-slider__code {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  .blog-slider__code {
+    font-size: 15px;
+  }
+}
 .blog-slider__title {
-  font-size: 24px;
+  font-size: calc( 20px + 10 * ((100vw - 320px) / 1600) );
   font-weight: 700;
-  color: #0d0925;
+  color: #2B2B2B;
   margin-bottom: 20px;
 }
 .blog-slider__text {
-  color: #4e4a67;
+  font-size: calc( 15px + 3 * ((100vw - 320px) / 1600) );
+  color: white;
   margin-bottom: 30px;
   line-height: 1.5em;
 }
@@ -7283,12 +7317,12 @@ header .connecting .instargam a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  background-color: #31bfff;
-  background-image: -o-linear-gradient(330deg, #31bfff 0%, #5267ff 25%, #f66ee8 50%, #ed4de4 75%, #9500f7 100%);
-  background-image: linear-gradient(120deg, #31bfff 0%, #5267ff 25%, #f66ee8 50%, #ed4de4 75%, #9500f7 100%);
-  padding: 15px 35px;
-  border-radius: 50px;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.63);
+  font-size: calc( 20px + 5 * ((100vw - 320px) / 1600) );
+  padding: 15px 20px;
+  border-radius: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   text-decoration: none;
@@ -7301,11 +7335,6 @@ header .connecting .instargam a {
 }
 .blog-slider__button-next {
   margin-left: 10px;
-}
-@media screen and (max-width: 576px) {
-  .blog-slider__button {
-    width: 100%;
-  }
 }
 .blog-slider .swiper-container-horizontal > .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
   bottom: 10px;
@@ -7325,13 +7354,13 @@ header .connecting .instargam a {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 1054px) {
   .blog-slider__pagination {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     left: 50% !important;
-    top: 205px;
+    top: 245px;
     width: 100% !important;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7347,7 +7376,7 @@ header .connecting .instargam a {
 .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 8px 0 !important;
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 1054px) {
   .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 5px !important;
   }
@@ -7357,8 +7386,8 @@ header .connecting .instargam a {
   height: 11px;
   display: block;
   border-radius: 10px;
-  background: #062744;
-  opacity: 0.2;
+  background: white;
+  opacity: 0.5;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -7370,7 +7399,7 @@ header .connecting .instargam a {
   -webkit-box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
           box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
 }
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 1054px) {
   .blog-slider__pagination .swiper-pagination-bullet-active {
     height: 11px;
     width: 30px;
