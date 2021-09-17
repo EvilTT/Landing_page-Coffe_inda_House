@@ -137,8 +137,11 @@ const formValidation = () => {
         }
     }
     if (errors === 0) {
-        // document.body.querySelector('.load').style.top = window.pageYOffset + 'px'
-        // document.body.classList.add('send')
+        document.body.querySelector('.load').style.top = window.pageYOffset + 'px'
+        document.body.classList.add('send')
+        setTimeout(() => {
+            document.body.classList.remove('send')
+        }, 4000)
         // toMail(form)
         console.log('Validate form!');
     }

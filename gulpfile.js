@@ -39,9 +39,8 @@ const path = {
         js: entry + '/js/**/*.js',
         images: entry + '/images/**' + '/*.+(png|jpg|gif|ico|svg|webp)',
     },
-    clear: './' + output + '/',
+    clear: [`./${output}/**`, `!./${output}/webfonts`],
 }
-
 const updateBrowser = () => {
     browserSync.init({
         server: {

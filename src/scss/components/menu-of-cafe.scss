@@ -1,19 +1,70 @@
 .catalog{
-    padding-bottom: 60px;
-    &_slider{
+    &_text{
+      padding: 30px 20px 40px 20px;
+      &-title{
+        text-align: center;
+        @include adaptiv-font(50, 35);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+        @extend %Font-Logo;
+        color: $black;
+        padding-bottom: 30px;
+      }
+      &-tubs{
         display: flex;
-        margin-left: 10%;
-        @media screen and (max-width: 1054px){
-          justify-content: center;
-          margin-left: 0px;
+        align-items: center;
+        justify-content: space-evenly;
+        .tub{
+          @include adaptiv-font(25, 20);
+          @extend %Font-Inter;
+          font-weight: 200;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
+          color: white;
+          cursor: pointer;  
         }
+        .tub.tub-active{
+          text-shadow: none;
+          font-weight: 400;
+          color: $black;
+          p::before{
+            width: 100%;
+          }
+        }
+        p{
+          position: relative;
+          transition: 0.2s;
+          &:hover{
+            color: $black;
+          }
+          &::before{
+            content: '';
+            position: absolute;
+            transition: 0.3s;
+            width: 0%;
+            background: $black;
+            height: 2px;
+            left: 0px;
+            top: 105%;
+          }
+        }
+      }
+    }
+
+    &_slider{
+      margin-left: 10%;
+      padding: 30px 0px 60px 0px;
+      &-slide{
+        display: none;
+      }
+      &-slide-active{
+        display: block;
+      }
     }
 }
 
+
 .blog-slider {
     @extend %Font-Monrope;
-    width: 90%;
-    position: relative;
+    width: 100%;
     max-width: 1000px;
     @include glassmorphizm;
     @include glassMorShadow;
@@ -22,33 +73,10 @@
     border-radius: 25px;
     height: 350px;
     transition: all .3s;
-    
-  @media screen and (max-width: 992px) {
-    max-width: 680px;
-        height: 400px;
-  }
-  
-  @media screen and (max-width: 1054px) {
-    min-height: 500px;
-    height: auto;
-    margin-left: 0px;
-    margin: 180px auto;
-    margin-bottom: 0px;
-  }
-  
-  
-  @media screen and (max-height: 500px) and (min-width: 992px) {
-        height: 350px;
-  }
-  
+        
   &__item {
     display: flex;
     align-items: center;
-    
-  @media screen and (max-width: 1054px) {
-    flex-direction: column;
-  }
-    
     &.swiper-slide-active {
       .blog-slider__img {
         img {
@@ -93,29 +121,10 @@
     transition: all .3s;
     }
     
-    @media screen and (max-width: 1054px) {
-    transform: translateY(-50%);
-      width: 90%;
-  }
-    @media screen and (max-width: 576px) {
-      width: 95%;
-    }
-     @media screen and (max-height: 500px) and (min-width: 992px) {
-        height: 270px;
-  }
   }
   
   &__content {
-        padding-right: 25px;
-    @media screen and (max-width: 1054px) {
-        margin-top: -120px;
-        text-align: center;
-        padding: 0 30px;
-    }
-    
-    @media screen and (max-width: 576px) {
-      padding: 0
-    }
+        padding-right: 25px;    
     > * {
       opacity: 0;
       transform: translateY(25px);
@@ -132,15 +141,8 @@
     margin-bottom: 25px;
     display: flex;
     align-items: center;
-    font-weight: 500;
     .price{
       margin-left: 30px;
-    }
-    @media screen and (max-width: 1054px){
-      justify-content: center;
-    }
-    @media screen and (max-width: 420px){
-      font-size: 15px;
     }
   }
   
@@ -152,8 +154,9 @@
   }
   
   &__text {
-    @include adaptiv-font(18, 15);
+    @include adaptiv-font(20, 15);
     color: white;
+    font-weight: 300;
     margin-bottom: 30px;
     line-height: 1.5em;
   }
@@ -175,8 +178,6 @@
     &-next{
         margin-left: 10px;
     }
-
-    
   }
   .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 10px;
@@ -193,22 +194,9 @@
     top: 50%;
     bottom: auto!important;
     transform: translateY(-50%);
-    
-    @media screen and (max-width: 1054px) {
-        transform: translateX(-50%);
-        left: 50%!important;
-        top: 245px;
-        width: 100%!important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
      &.swiper-pagination-bullets .swiper-pagination-bullet {
             margin: 8px 0 !important;
-        @media screen and (max-width: 1054px) {
-         margin: 0 5px !important;
-        }
-}
+    }
     
     .swiper-pagination-bullet {
     width: 11px;
@@ -218,19 +206,13 @@
     background: white;
     opacity: 0.5;
     transition: all .3s;
-    &-active {
-    opacity: 1;
-    background: $black;
-    height: 30px;
-    box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
-        
-        @media screen and (max-width: 1054px) {
-          height: 11px;
-          width: 30px;
-        }
-    }
-    }
-    
+      &-active {
+      opacity: 1;
+      background: $black;
+      height: 30px;
+      box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+      }
+    } 
   }
-  
 }
+

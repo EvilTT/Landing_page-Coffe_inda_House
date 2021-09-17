@@ -1,23 +1,23 @@
 //! Import configuration files 
 @import "./config/normalize.scss";
 @import "./config/fonts.scss";
-@import "./config/variables.scss";
 @import "./config/mixin.scss";
 @import "./config/templates.scss";
 @import "./config/global.scss";
+@import "./components/scroll-btn.scss";
 //? Icons FA5 link 
 @import "./config/icons.scss";
 
 //! Import components files
 @import "./components/menu-navigation.scss";
-@import "./components/scroll-btn.scss";
 //? Main components 
-@import "./components/about.scss";
+@import "./components/home-page.scss";
+@import './components/about.scss';
 @import "./components/menu-of-cafe.scss";
 @import "./components/feedback.scss";
+@import './components/preloader.scss';
 @import "./components/map.scss";
 @import './components/footer.scss';
-
-
+@import './components/privicy.scss';
 //! Media  
 @import "./config/media.scss";

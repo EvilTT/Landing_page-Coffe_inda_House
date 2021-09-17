@@ -5,11 +5,13 @@ const arrow = document.querySelector('.arrow_container')
 const closeDiv = document.querySelector('.menu_position__nav')
 const btnColor = document.querySelector('.btn')
 
-window.onscroll = () =>
-    window.pageYOffset >= 300 &&
-    document.body.clientHeight - (window.innerHeight + window.pageYOffset) >= 50
-        ? (arrow.style.display = 'block')
-        : (arrow.style.display = 'none')
+window.addEventListener('DOMContentLoaded', (e) => {
+    let map = document.querySelector('IFRAME')
+    if(window.innerWidth <= 530){
+        map.setAttribute('height', '350')
+    }
+})
+
 
 document.body.addEventListener('click', (event) => {
     //! open/close menu btn
@@ -46,15 +48,3 @@ document.body.addEventListener('click', (event) => {
     }   
 })
 
-// let mySwiper = new Swiper('.swiper-container', {
-//     direction: 'vertical',
-//     loop: true,
-//     pagination: '.swiper-pagination',
-//     grabCursor: true,
-//     speed: 1000,
-//     paginationClickable: true,
-//     parallax: true,
-//     autoplay: false,
-//     effect: 'slide',
-//     mousewheelControl: 1,
-// })

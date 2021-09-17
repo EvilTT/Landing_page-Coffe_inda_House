@@ -3,15 +3,18 @@
     border-radius: 10px;
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: row-reverse;
     // flex-direction: column-reverse;
-    // align-items: center;
+    align-items: center;
     &_accordeon{
+        margin-right: 20px;
         width: 550px;
         border-radius: 10px;
         @include glassMorShadow;
         @include glassmorphizm;
         background-color: rgba(255, 255, 255, 0.37);
+        height:min-content;
         .accordion-item{
             border-radius: 10px;
             .accordion-item-header{
@@ -51,9 +54,12 @@
         }
     }
     &_container{
+        min-width: 600px;
         padding: 10px;
-        margin-top: 20px;
-        
+        @include glassmorphizm;
+        @include glassMorShadow;
+        border-radius: 10px;
+        border: none;
     }
 }
 

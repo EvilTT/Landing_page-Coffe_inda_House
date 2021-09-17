@@ -7,43 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Coffee inda House, кофейня Жлобин.">
     <link rel="stylesheet" href="./css/style.min.css">
+    
     <!-- Logo font's -->
     <link rel="preload" href="./fonts/Ethnocentric-Regular.ttf" as="font" crossorigin="anonymous">
-    <!--! Swiper CSS-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!--! Swiper CSS-->
     <script defer src="./js/index.min.js"></script>
     <script defer src="./js/scroll-navigation.min.js"></script>
+    <script defer src='./js/scroll.min.js'></script>
+    <!--! Swiper CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <!--? Swiper JS-->
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!--? Swiper JS-->
+    <script defer src='./js/slider-about.min.js'></script>
     <script defer src="./js/slider-menu.min.js"></script>
     <script defer src="./js/feedback-form.min.js"></script>
     <script defer src="./js/accordeon.min.js"></script>
-
     <title>Coffee inda House</title>
 </head>
 
 <body>
+    <!--! LOADER  -->
     <div class="load">
-        <div class="windows8">
-            <div class="wBall" id="wBall_1">
-                <div class="wInnerBall"></div>
-            </div>
-            <div class="wBall" id="wBall_2">
-                <div class="wInnerBall"></div>
-            </div>
-            <div class="wBall" id="wBall_3">
-                <div class="wInnerBall"></div>
-            </div>
-            <div class="wBall" id="wBall_4">
-                <div class="wInnerBall"></div>
-            </div>
-            <div class="wBall" id="wBall_5">
-                <div class="wInnerBall"></div>
+
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
             </div>
         </div>
+
     </div>
+    <!--! LOADER  -->
+
+
     <!--! Scroll to top -->
     <div class="arrow_container" tabindex="0">
         <a href="#top" tabindex="-1">
@@ -116,7 +124,7 @@
                     </a>
                 </div>
                 <div class="menu_text">
-                    <a href="#maps" tabindex="-1">Расположение</a>
+                    <a href="#maps" tabindex="-1">Контакты</a>
                 </div>
             </div>
 
@@ -131,9 +139,6 @@
             <div class="container">
                 <header>
                     <div class="connecting">
-                        <div class="telephone">
-                            <a href="tel:+375298488210">+375(29)848-82-10</a>
-                        </div>
                         <div class="instargam">
                             <a href="https://www.instagram.com/coffee_inda_house/?hl=ru" target="_blank" rel="noopener">
                                 <i class="fab fa-instagram"></i>
@@ -164,11 +169,49 @@
         <!--! Home page -->
 
         <!--! aboutt -->
-        <section class="" id="aboutt">
+        <section class="about" id="aboutt">
             <div class="container">
-                <!-- График работы описание заведения, фото заведения, вайфай, уют и т.д -->
+                <div class="about-container">
+                    <div class="content-wrapper">
+                        <div class="content-slider">
 
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                      <img src="./images/Home_Page_Logo.png" alt="">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="./images/Home_Page_Logo.png" alt="">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="./images/Home_Page_Logo.png" alt="">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="./images/Home_Page_Logo.png" alt="">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="./images/Home_Page_Logo.png" alt="">
+                                  </div>
 
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                              </div>
+                          
+                        </div>
+                        <div class="content_text">
+                            <div class="title">
+                                О нас
+                            </div>
+                            <div class="text">
+                                <p>
+                                    Кофейня Coffee inda House - это новый концепт в индустрии кофеен.  Привить культуру питья кофе - наша цель. Если вы хотите лучшего, то вам именно к нам. Уютный интерьер в лофт стиле, профессиональный бариста и большой ассортимент кофе, напитков и десертов. Время проведенное у нас, вы запомните надолго!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--! aboutt -->
@@ -178,146 +221,446 @@
         <section class="menu-of-cafe" id="menu">
             <div class="container">
                 <div class="catalog">
-                    <div class="catalog_text"></div>
-                    <div class="catalog_slider">
-                        
-                        <div class="blog-slider">
-                            <div class="blog-slider__wrp swiper-wrapper">
-
-                                <!-- Капучино -->
-                              <div class="blog-slider__item swiper-slide">
-                                <div class="blog-slider__img">
-                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
-                                </div>
-                                <div class="blog-slider__content">
-                                  <span class="blog-slider__code">
-                                      <div class="volume">
-                                        <i class="fas fa-glass-whiskey"></i> 172/344 мл 
-                                      </div>
-                                      <div class="price">
-                                        <i class="far fa-credit-card"></i> 3.5/6 руб
-                                      </div>
-                                  </span>
-                                  <div class="blog-slider__title">Cappucciono</div>
-                                  <div class="blog-slider__text">Кофейный напиток итальянской кухни на основе эспрессо с добавлением в него подогретого вспененного молока </div>
-                                  <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
-                                  <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                              </div>
-
-                              <!-- Латте -->
-                              <div class="blog-slider__item swiper-slide">
-                                <div class="blog-slider__img">
-                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">                                </div>
-                                <div class="blog-slider__content">
-                                  <span class="blog-slider__code">
-                                    <div class="volume">
-                                        <i class="fas fa-glass-whiskey"></i> 242/484 мл 
-                                      </div>
-                                      <div class="price">
-                                        <i class="far fa-credit-card"></i> 3.5/6 руб
-                                      </div>
-                                  </span>
-                                  <div class="blog-slider__title">Latte</div>
-                                  <div class="blog-slider__text">Кофейный напиток родом из Италии, состоящий из молока и кофе эспрессо. Латте варится на основе молока, образуя в чашке или бокале трёхслойную смесь из молока, эспрессо и пены.</div>
-                                  <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
-                                  <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                              </div>
-                              
-                              <!-- Эспресоо -->
-                              <div class="blog-slider__item swiper-slide">
-                                <div class="blog-slider__img">
-                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
-                                </div>
-                                <div class="blog-slider__content">
-                                  <span class="blog-slider__code">
-                                    <div class="volume">
-                                        <i class="fas fa-glass-whiskey"></i> 32/64 мл 
-                                      </div>
-                                      <div class="price">
-                                        <i class="far fa-credit-card"></i> 3.5/6 руб
-                                      </div>
-                                  </span>
-                                  <div class="blog-slider__title">Espresso</div>
-                                  <div class="blog-slider__text">Это итальянский ответ на вашу сиюминутную потребность в кофеине. Само слово передает саму суть заключенную в этом напитке. Все верно, он мгновенно готовится в эспрессо машине и этот шот необходимо моментально выпить.</div>
-                                  <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
-                                  <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                              </div>
-
-                              <!-- Американо -->
-                              <div class="blog-slider__item swiper-slide">
-                                <div class="blog-slider__img">
-                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
-                                </div>
-                                <div class="blog-slider__content">
-                                  <span class="blog-slider__code">
-                                    <div class="volume">
-                                        <i class="fas fa-glass-whiskey"></i> 92/184 мл 
-                                      </div>
-                                      <div class="price">
-                                        <i class="far fa-credit-card"></i> 3.5/6 руб
-                                      </div>
-                                  </span>
-                                  <div class="blog-slider__title">Americano</div>
-                                  <div class="blog-slider__text">Способ приготовления кофе, заключающийся в соединении определённого количества горячей воды и эспрессо.</div>
-                                  <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
-                                  <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                              </div>
-
-
-                              <!-- Флэт уайт -->
-                              <div class="blog-slider__item swiper-slide">
-                                <div class="blog-slider__img">
-                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
-                                </div>
-                                <div class="blog-slider__content">
-                                  <span class="blog-slider__code">
-                                    <div class="volume">
-                                        <i class="fas fa-glass-whiskey"></i> 172/344 мл 
-                                      </div>
-                                      <div class="price">
-                                        <i class="far fa-credit-card"></i> 3.5/6 руб
-                                      </div>
-                                  </span>
-                                  <div class="blog-slider__title">Flat white</div>
-                                  <div class="blog-slider__text">Самый насыщенный по вкусу молочный напиток на основе эспрессо. Его особенно любят ценители вкуса эспрессо в чашке.</div>
-                                  <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
-                                  <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                              </div>
-                              
-
-                              <!-- Раф -->
-                              <div class="blog-slider__item swiper-slide">
-                                <div class="blog-slider__img">
-                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
-                                </div>
-                                <div class="blog-slider__content">
-                                  <span class="blog-slider__code">
-                                    <div class="volume">
-                                        <i class="fas fa-glass-whiskey"></i> 242/484 мл 
-                                      </div>
-                                      <div class="price">
-                                        <i class="far fa-credit-card"></i> 3.5/6 руб
-                                      </div>
-                                  </span>
-                                  <div class="blog-slider__title">Raf coffee</div>
-                                  <div class="blog-slider__text">Это горячий кофейный напиток на основе эспрессо, ванильного сахара и жирных сливок, которые смешиваются в питчере и взбиваются паром с помощью кофемашины.</div>
-                                  <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
-                                  <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                              </div>
-
+                    <div class="catalog_text">
+                        <div class="catalog_text-title">
+                            <p>Menu</p>
+                        </div>
+                        <div class="catalog_text-tubs">
+                            <div class="tub tub-active">
+                                <p tabindex="0" data-num='0'>Кофе</p>
                             </div>
-                            <div class="blog-slider__pagination"></div>
-                          </div>
+                            <div class="tub">
+                                <p tabindex="0" data-num='1'>Десерты</p>
+                            </div>
+                            <div class="tub">
+                                <p tabindex="0" data-num='2'>Чаи</p>
+                            </div>
+                            <div class="tub">
+                                <p tabindex="0" data-num='3'>Фреши</p>
+                            </div>
+                            <div class="tub">
+                                <p tabindex="0" data-num='4'>Горячие пунши</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog_slider">
+                        <!-- ! Coffe -->
+                            <div class="catalog_slider-slide catalog_slider-slide-active">
+                                <div class="blog-slider">
+                                    <div class="blog-slider__wrp swiper-wrapper">
+                                
+                                        <!-- Капучино -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                              <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 172/344 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/5.25 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Cappuccino</div>
+                                          <div class="blog-slider__text">Кофейный напиток итальянской кухни на основе эспрессо с добавлением в него подогретого вспененного молока </div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                      <!-- Латте -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">                                </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 242/484 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/5.25 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Latte</div>
+                                          <div class="blog-slider__text">Кофейный напиток родом из Италии, состоящий из молока и кофе эспрессо. Латте варится на основе молока, образуя в чашке или бокале трёхслойную смесь из молока, эспрессо и пены.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                      
+                                      <!-- Эспресоо -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 32/64 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3/4.5 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Espresso</div>
+                                          <div class="blog-slider__text">Это итальянский ответ на вашу сиюминутную потребность в кофеине. Само слово передает саму суть заключенную в этом напитке.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                      <!-- Американо -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 92/184 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3/4.5 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Americano</div>
+                                          <div class="blog-slider__text">Способ приготовления кофе, заключающийся в соединении определённого количества горячей воды и эспрессо.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                
+                                      <!-- Флэт уайт -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 172/344 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 5/7.5 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Flat white</div>
+                                          <div class="blog-slider__text">Самый насыщенный по вкусу молочный напиток на основе эспрессо. Его особенно любят ценители вкуса эспрессо в чашке.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                      
+                                
+                                      <!-- Раф -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 242/484 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 4.5/6.75 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Raf coffee</div>
+                                          <div class="blog-slider__text">Это горячий кофейный напиток на основе эспрессо, ванильного сахара и жирных сливок, которые смешиваются в питчере и взбиваются паром с помощью кофемашины.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                    </div>
+                                    <div class="blog-slider__pagination"></div>
+                                </div>
+                            </div>
+                            <!-- ! Десерты -->
+                            <div class="catalog_slider-slide">
+                                <div class="blog-slider">
+                                    <div class="blog-slider__wrp swiper-wrapper">   
+                                
+                                        <!-- Капучино -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                              <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 172/344 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Чай</div>
+                                          <div class="blog-slider__text">Кофейный напиток итальянской кухни на основе эспрессо с добавлением в него подогретого вспененного молока </div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                      <!-- Латте -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">                                </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 242/484 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Latte</div>
+                                          <div class="blog-slider__text">Кофейный напиток родом из Италии, состоящий из молока и кофе эспрессо. Латте варится на основе молока, образуя в чашке или бокале трёхслойную смесь из молока, эспрессо и пены.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                      
+                                      <!-- Эспресоо -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 32/64 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Espresso</div>
+                                          <div class="blog-slider__text">Это итальянский ответ на вашу сиюминутную потребность в кофеине. Само слово передает саму суть заключенную в этом напитке.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                      <!-- Американо -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 92/184 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Americano</div>
+                                          <div class="blog-slider__text">Способ приготовления кофе, заключающийся в соединении определённого количества горячей воды и эспрессо.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                
+                                      <!-- Флэт уайт -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 172/344 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Flat white</div>
+                                          <div class="blog-slider__text">Самый насыщенный по вкусу молочный напиток на основе эспрессо. Его особенно любят ценители вкуса эспрессо в чашке.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                      
+                                
+                                      <!-- Раф -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 242/484 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Raf coffee</div>
+                                          <div class="blog-slider__text">Это горячий кофейный напиток на основе эспрессо, ванильного сахара и жирных сливок, которые смешиваются в питчере и взбиваются паром с помощью кофемашины.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                    </div>
+                                    <div class="blog-slider__pagination"></div>
+                                </div>
+                            </div>
+                            <!-- ! Чаи -->
+                            <div class="catalog_slider-slide">
+                                <div class="blog-slider">
+                                    <div class="blog-slider__wrp swiper-wrapper">   
+                                
+                                        <!-- Капучино -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                              <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 400 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 5 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Чай</div>
+                                          <div class="blog-slider__text">Кофейный напиток итальянской кухни на основе эспрессо с добавлением в него подогретого вспененного молока </div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                      <!-- Латте -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">                                </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 242/484 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Latte</div>
+                                          <div class="blog-slider__text">Кофейный напиток родом из Италии, состоящий из молока и кофе эспрессо. Латте варится на основе молока, образуя в чашке или бокале трёхслойную смесь из молока, эспрессо и пены.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                      
+                                      <!-- Эспресоо -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 32/64 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Espresso</div>
+                                          <div class="blog-slider__text">Это итальянский ответ на вашу сиюминутную потребность в кофеине. Само слово передает саму суть заключенную в этом напитке.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                      <!-- Американо -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 92/184 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Americano</div>
+                                          <div class="blog-slider__text">Способ приготовления кофе, заключающийся в соединении определённого количества горячей воды и эспрессо.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                
+                                      <!-- Флэт уайт -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 172/344 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Flat white</div>
+                                          <div class="blog-slider__text">Самый насыщенный по вкусу молочный напиток на основе эспрессо. Его особенно любят ценители вкуса эспрессо в чашке.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                      
+                                
+                                      <!-- Раф -->
+                                      <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                          <span class="blog-slider__code">
+                                            <div class="volume">
+                                                <i class="fas fa-glass-whiskey"></i> 242/484 мл 
+                                              </div>
+                                              <div class="price">
+                                                <i class="far fa-credit-card"></i> 3.5/6 руб
+                                              </div>
+                                          </span>
+                                          <div class="blog-slider__title">Raf coffee</div>
+                                          <div class="blog-slider__text">Это горячий кофейный напиток на основе эспрессо, ванильного сахара и жирных сливок, которые смешиваются в питчере и взбиваются паром с помощью кофемашины.</div>
+                                          <a href="#" class="blog-slider__button blog-slider__button-prev"><i class="fas fa-chevron-left"></i></a>
+                                          <a href="#" class="blog-slider__button blog-slider__button-next"><i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                      </div>
+                                
+                                    </div>
+                                    <div class="blog-slider__pagination"></div>
+                                </div>
+                            </div>
+                            <!-- ! Фреши -->
+                            <div class="catalog_slider-slide"></div>
+                            <!-- ! Пунши -->
+                            <div class="catalog_slider-slide"></div>
+
+                    </div>
 
                     </div>
                 </div>
-            </div>
         </section>
         <!--! menu-cafe -->
 
@@ -443,7 +786,7 @@
             <div class="container">
                 <div class="location">
                     <div class="location_container">
-
+                        <iframe  loading='lazy' src="https://yandex.ru/map-widget/v1/?um=constructor%3A47a43e4f12a872c40e5ca7e32a85fd7861245abe58b6db25149f1dec77e57c7b&amp;source=constructor" width="100%" height="538" frameborder="0"></iframe>
                     </div>
                     <div class="location_accordeon">
                         <div class="accordion-item">
@@ -455,7 +798,7 @@
                                 Мы располагаемся по адресу - г.Жлобин, ул.Войкава дом 16, помещение 172
                             </div>
                         </div>
-                        <div class="accordion-item">
+                        <div class="accordion-item show">
                             <div class="accordion-item-header">
                                 <p>Режим работы</p>
                                 <i class="fas fa-angle-down"></i>
@@ -511,6 +854,9 @@
             </div>
         </section>
         <!--!Footer -->
+        <div class="copyright">
+            &#169 Ананчиков И.М., 2021 Все права защищены.
+        </div>
 
     </div>
 </body>

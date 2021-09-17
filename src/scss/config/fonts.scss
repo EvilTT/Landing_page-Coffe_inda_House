@@ -1,5 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 //! Ethnocentric (logo-font)
 @font-face {
     font-family: 'Ethnocentric-Regular';
@@ -33,4 +31,20 @@
     font-weight: 300;
     font-display: swap;
     src: local('Manrope-Light'), url('/fonts/Manrope-Light.ttf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Manrope-Medium'), url('/fonts/Manrope-Medium.ttf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: local('Manrope-Bold'), url('/fonts/Manrope-Bold.ttf') format('opentype');
 }
