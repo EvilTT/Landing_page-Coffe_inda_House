@@ -16,7 +16,7 @@ const webp = require('gulp-webp')
 const webpHTML = require('gulp-webp-html')
 const ttf2woff = require('gulp-ttf2woff')
 const ttf2woff2 = require('gulp-ttf2woff2')
-
+const htmlmin = require('gulp-htmlmin')
 
 const path = {
     build: {
@@ -54,6 +54,7 @@ const updateBrowser = () => {
 const html = () => {
     return src(path.src.html)
         .pipe(webpHTML())
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest(path.build.html))
         .pipe(browserSync.stream())
 }
