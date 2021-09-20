@@ -26,7 +26,7 @@ header{
         border-bottom-left-radius: 10px;
         h1{
             @extend %Font-Logo;
-            @include adaptiv-font(105, 45);
+            @include adaptiv-font(105, 48);
             text-transform: uppercase;
             color: $black;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);

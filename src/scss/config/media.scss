@@ -257,18 +257,16 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        height: 100vh;
+        padding-bottom: 0px;
         &_text{
+            margin-top: 0px;
             text-align: center;
-            padding: 0px;
-            margin-top: 30px;
-            padding: 0px 8px;
+            padding: 50px 8px 65px 8px;
             p{
                 margin-top: 30px;
                 text-align: center;
             }
             .btn{
-                margin-top: 60px;
                a{
                 padding: 15px 20px;
                }

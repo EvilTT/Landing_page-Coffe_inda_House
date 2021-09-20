@@ -22,8 +22,6 @@ const swiperOfMenu = new Swiper('.blog-slider', {
     effect: 'fade',
     loop: true,
     observer: true,
-    // observeParents: true,
-    // observeSlideChildren: true,
     mousewheel: {
       invert: false,
     },

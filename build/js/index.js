@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }
 })
 
+window.onload = () => document.body.classList.remove('send')
 
 document.body.addEventListener('click', (event) => {
     //! open/close menu btn
