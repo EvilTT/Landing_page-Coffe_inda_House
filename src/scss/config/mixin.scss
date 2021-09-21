@@ -1,19 +1,17 @@
 // ! АДАПТИВНЫЙ ШРИФТ
 @mixin adaptiv-font($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    font-size: calc(
-      #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
-    );
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
 }
 
 @mixin glassmorphizm {
   background: rgba(66, 66, 66, 0.15);
-  backdrop-filter: blur( 8.0px );
-  -webkit-backdrop-filter: blur( 8.0px );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @mixin glassMorShadow {
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
