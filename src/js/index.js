@@ -5,7 +5,7 @@ const arrow = document.querySelector('.arrow_container')
 const closeDiv = document.querySelector('.menu_position__nav')
 const btnColor = document.querySelector('.btn')
 
-window.addEventListener('DOMContentLoaded', (e) => {
+window.addEventListener('DOMContentLoaded', () => {
     let map = document.querySelector('IFRAME')
     if(window.innerWidth <= 530){
         map.setAttribute('height', '350')
@@ -16,9 +16,9 @@ window.onload = () => {
     document.body.classList.remove('send')
     let resolve = 'Servise Worker - Active!'
     let rejected = 'Servise Worker - Active Fail'
-    if(window.navigator.serviceWorker) {
+    if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/js/service-worker.min.js')
-        .then(() => console.log(`%c${resolve}`, 'color: green; font-weight: 700; font-size: 18px'))
+        .then((reg) => console.log(`%c${resolve}`, 'color: green; font-weight: 700; font-size: 18px', reg.scope))
         .catch(() => console.log(`%c${rejected}`, 'color: red; font-weight: 700; font-size: 18px'))
     }
 }
