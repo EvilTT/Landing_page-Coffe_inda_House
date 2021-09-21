@@ -25,6 +25,17 @@ form.addEventListener('focusout', (event) => {
         : (event.target.parentNode.lastElementChild.id = '')
 })
 
+form.addEventListener('keydown', (event) => {
+    if(event.code === 'Enter'){
+        switch(document.activeElement){
+            case fullName[0]:
+            case fullName[1]:
+            case textarea:
+                formValidation()
+        }
+    }
+})
+
 form.addEventListener('change', (event) => {
     if (!(event.target.name === 'contact')) return
     switch (event.target.value) {

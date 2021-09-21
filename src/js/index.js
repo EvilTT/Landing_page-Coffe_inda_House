@@ -12,7 +12,16 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }
 })
 
-window.onload = () => document.body.classList.remove('send')
+window.onload = () => {
+    document.body.classList.remove('send')
+    let resolve = 'Servise Worker - Active!'
+    let rejected = 'Servise Worker - Active Fail'
+    if(window.navigator.serviceWorker) {
+        navigator.serviceWorker.register('/js/service-worker.min.js')
+        .then(() => console.log(`%c${resolve}`, 'color: green; font-weight: 700; font-size: 18px'))
+        .catch(() => console.log(`%c${rejected}`, 'color: red; font-weight: 700; font-size: 18px'))
+    }
+}
 
 document.body.addEventListener('click', (event) => {
     //! open/close menu btn

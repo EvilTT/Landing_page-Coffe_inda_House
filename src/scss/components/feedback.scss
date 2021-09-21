@@ -69,6 +69,7 @@
     left: 4px;
     font-weight: 500;
     z-index: 1;
+    color: $black;
     @include adaptiv-font(15, 10);
 }
 
@@ -282,7 +283,6 @@
     padding-left: 30px;
     @include adaptiv-font(25, 15);
     line-height: 25px;
-    // min-width: 450px;
     .title{
         text-transform: uppercase;
         @extend %Font-Logo;
