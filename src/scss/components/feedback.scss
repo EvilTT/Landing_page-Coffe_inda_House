@@ -36,7 +36,7 @@
         @extend %Font-Inter;
         font-weight: 400;
         outline: none;
-        background-color: transparent !important;
+        background-color:rgba(255, 255, 255, 0.5);
         transition: 0.3s;
         &:focus, &:hover{
             @include glassMorShadow;
@@ -45,19 +45,19 @@
             top: -17px;
             left: 4px;
             font-weight: 500;
-            z-index: 1;
+            color: $black;
             @include adaptiv-font(15, 10);
         }
     }
     .input-text{
         position: absolute;
-        z-index: -1;
+        z-index: 20 ;
         left: 10px;
         top: 12px;
         @include adaptiv-font(23, 15);
         @extend %Font-Monrope;
         font-weight: 300;
-        color: $black;
+        color: #A0929F;
         letter-spacing: 1px;
         transition: all 0.3s;
     }
@@ -131,10 +131,10 @@
         color: $black;
         @include adaptiv-font(25, 20);
         @include glassmorphizm;
+        background-color:rgba(255, 255, 255, 0.5);
         @extend %Font-Inter;
         font-weight: 400;
         outline: none;
-        background-color: transparent;
         resize: none;
         transition: 0.1s linear;
         &:hover, &:focus{
