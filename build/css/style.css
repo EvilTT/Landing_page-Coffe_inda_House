@@ -671,8 +671,6 @@ section .container {
   border-bottom-right-radius: 10px;
   background: rgba(66, 66, 66, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,6 +678,10 @@ section .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.menu_navigation.open_nav {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .menu_position {
   display: -webkit-box;
@@ -2306,7 +2308,7 @@ header .connecting .instargam a:hover {
   }
   .feedback_text-title p {
     padding: 0px 5px 10px 5px;
-    text-align: center;
+    text-align: justify;
   }
 
   .form_attendance-cont {
@@ -2364,10 +2366,6 @@ header .connecting .instargam a:hover {
   }
   .blog-slider__pagination {
     top: 200px;
-  }
-
-  .feedback_text-title p {
-    text-align: justify;
   }
 }
 @media (max-width: 375px) {

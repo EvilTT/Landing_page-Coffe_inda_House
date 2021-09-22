@@ -1,4 +1,4 @@
-const cashVersion = 'cash-pwa-cih-v2'
+const cashVersion = 'cash-pwa-cih-v1'
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -34,7 +34,7 @@ self.addEventListener('install', (event) => {
     )
 })
 
-self.addEventListener('activate', () => {
+self.addEventListener('activate', (event) => {
     caches.keys()
     .then(keyList => {
         return Promise.all(keyList

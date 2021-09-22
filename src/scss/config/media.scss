@@ -323,7 +323,7 @@
         line-height: 20px;
         p{
             padding: 0px 5px 10px 5px;
-            text-align: center;
+            text-align: justify;
         }
     }
     .form_attendance-cont{
@@ -375,9 +375,6 @@
       &__pagination{
         top: 200px;
       }
-    }
-    .feedback_text-title p {
-        text-align: justify;
     }
   }
   

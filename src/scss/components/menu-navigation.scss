@@ -12,9 +12,11 @@
         border-bottom-right-radius: 10px;
         background: rgba(66, 66, 66, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.18);
-        backdrop-filter: blur( 5.0px );
        display: flex;
         flex-direction: column;
+    }
+    &_navigation.open_nav{
+         backdrop-filter: blur( 5.0px );
     }
     &_position{
         display: flex;
@@ -85,6 +87,7 @@
     margin-left: 0px;
     transform: translateX(0px);
     opacity: 1;
+
 }
 
 .active-navigation-tab{

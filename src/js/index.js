@@ -31,6 +31,8 @@ document.body.addEventListener('click', (event) => {
         event.target.classList.contains('menu_position__nav') ||
         closeDiv.contains(event.target)
     ) {
+        document.querySelector('.menu_navigation').classList.toggle('open_nav')
+
         menuText.forEach((item) => item.classList.toggle('open-menu'))
         closeDiv.querySelector('i').classList.toggle('icon-close')
         return
