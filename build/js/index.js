@@ -17,7 +17,7 @@ window.onload = () => {
     let resolve = 'Servise Worker - Active!'
     let rejected = 'Servise Worker - Active Fail'
     if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/js/service-worker.min.js')
+        navigator.serviceWorker.register('./service-worker.js')
         .then((reg) => console.log(`%c${resolve}`, 'color: green; font-weight: 700; font-size: 18px', reg.scope))
         .catch(() => console.log(`%c${rejected}`, 'color: red; font-weight: 700; font-size: 18px'))
     }
