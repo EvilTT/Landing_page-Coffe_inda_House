@@ -1,7 +1,8 @@
+const cashVersion = 'cash-pwa-cih-v1'
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open('cash-pwa-cih-v1')
+        caches.open(cashVersion)
         .then(cache => cache.addAll(
             [
                 './index.html',
@@ -28,15 +29,25 @@ self.addEventListener('install', (event) => {
                 './webfonts/fa-solid-900.ttf'
 
             ])
-        ).then(() => console.log('Cashed information'))
+        ).then(() => console.log('Caching completed successfully'))
         .catch(e => console.error(`${e.name} - ${e.message}`))
     )
 })
 
-// self.addEventListener('activate', (event) => {
-    
-// })
+self.addEventListener('activate', (event) => {
+    caches.keys()
+    .then(keyList => {
+        return Promise.all(keyList
+            .filter(item => item !== cashVersion)
+            .map(item => caches.delete(item)))
+    })
+})
 
 self.addEventListener('fetch', (event) => {
     console.log(event.request.url);
+    event.respondWith(
+        caches.match(event.request)
+        .then(response => response ?? fetch(event.request))
+        .catch(error => console.error(`${error.name} : ${error.message} - Отсутствует сеть!`))
+    )
 })
