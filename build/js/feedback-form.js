@@ -13,28 +13,26 @@ const clearInputInForm = () => {
     form.reset()
 }
 
+const validateError = (errorsFiel) => {
+    errorsFiel.classList.add('_error-validation')
+}
+
 const generateModal = (message) => {
     let modal = document.createElement('div')
     console.log(message);
 }
 
 form.addEventListener('focusout', (event) => {
-    if (!event.target.classList.contains('fullName')) return
-    event.target.value !== ''
+    if(event.target.tagName === 'TEXTAREA'){
+        event.target.value !== '' ? event.target.nextElementSibling.id = 'textInArea' : event.target.nextElementSibling.id = ''
+    }
+    if (event.target.classList.contains('fullName')){
+        event.target.value !== ''
         ? (event.target.parentNode.lastElementChild.id = 'textInInput')
         : (event.target.parentNode.lastElementChild.id = '')
-})
-
-form.addEventListener('keydown', (event) => {
-    if(event.code === 'Enter'){
-        switch(document.activeElement){
-            case fullName[0]:
-            case fullName[1]:
-            case textarea:
-                formValidation()
-        }
     }
 })
+
 
 form.addEventListener('change', (event) => {
     if (!(event.target.name === 'contact')) return
@@ -74,11 +72,6 @@ const validateFullname = (valueOfFullName) =>
         ? true
         : false
 
-const validateError = (errorsFiel) => {
-    errorsFiel.classList.add('_error-validation')
-    errorsFiel.focus()
-}
-
 
 const toMail = dataForm => {
     let formData = new FormData(dataForm)
@@ -103,6 +96,14 @@ const formValidation = () => {
     let errors = 0
     for (let field of requiredElements) {
         switch (field.name) {
+            case 'text-message':
+                if(field.value.length < 20){
+                    validateError(field)
+                    errors++
+                }else{
+                    removeError(field)
+                }
+                break
             case 'name':
                 if (validateFullname(field.value)) {
                     removeError(field)
@@ -155,5 +156,7 @@ const formValidation = () => {
         }, 4000)
         // toMail(form)
         console.log('Validate form!');
+    }else{
+        document.querySelector('.feedback').scrollIntoView(true)
     }
 }

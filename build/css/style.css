@@ -391,7 +391,7 @@ template {
   font-family: "Ethnocentric-Regular";
 }
 
-.location_accordeon .accordion-item .accordion-item-header, .input-container .input-text, .blog-slider, .content-wrapper .content_text .title {
+.location_accordeon .accordion-item .accordion-item-header, .message .placeholder-textarea, .input-container .input-text, .blog-slider, .content-wrapper .content_text .title {
   font-family: "Manrope", sans-serif;
 }
 
@@ -1184,8 +1184,8 @@ header .connecting .instargam a:hover {
       flex-shrink: 0;
   height: 400px;
   background: #2B2B2B;
-  -webkit-box-shadow: 15px 21px 12px 0px rgba(34, 60, 80, 0.2);
-          box-shadow: 15px 21px 12px 0px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(65, 65, 65, 0.2);
+          box-shadow: 5px 5px 10px 0px rgba(65, 65, 65, 0.2);
   border-radius: 20px;
   -webkit-transform: translateX(-80px);
       -ms-transform: translateX(-80px);
@@ -1397,6 +1397,14 @@ header .connecting .instargam a:hover {
   font-size: calc( 10px + 5 * ((100vw - 320px) / 1600) );
 }
 
+#textInArea {
+  top: -20px;
+  left: 5px;
+  font-weight: 500;
+  color: #2B2B2B;
+  font-size: calc( 15px + 10 * ((100vw - 320px) / 1600) );
+}
+
 .title-contact {
   font-size: calc( 15px + 10 * ((100vw - 320px) / 1600) );
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
@@ -1467,6 +1475,7 @@ header .connecting .instargam a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 .message textarea {
   width: 100%;
@@ -1489,6 +1498,25 @@ header .connecting .instargam a:hover {
 .message textarea:hover, .message textarea:focus {
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+.message textarea:focus + .placeholder-textarea {
+  top: -20px;
+  left: 5px;
+  font-weight: 500;
+  color: #2B2B2B;
+  font-size: calc( 15px + 10 * ((100vw - 320px) / 1600) );
+}
+.message .placeholder-textarea {
+  position: absolute;
+  font-size: calc( 18px + 10 * ((100vw - 320px) / 1600) );
+  font-weight: 300;
+  color: #A0929F;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  left: 10px;
+  top: 10px;
 }
 .message .privacy-policy {
   display: -webkit-box;
@@ -1654,7 +1682,7 @@ header .connecting .instargam a:hover {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   padding-left: 30px;
-  font-size: calc( 15px + 10 * ((100vw - 320px) / 1600) );
+  font-size: calc( 20px + 5 * ((100vw - 320px) / 1600) );
   line-height: 25px;
 }
 .feedback_text-title .title {
@@ -1731,6 +1759,26 @@ header .connecting .instargam a:hover {
 
 .input-container ._error-validation {
   border: 2px solid #FF3008;
+  -webkit-box-shadow: 0px 0px 10px #FF3008;
+          box-shadow: 0px 0px 10px #FF3008;
+}
+.input-container ._error-validation:focus + .input-text {
+  color: #FF3008;
+}
+.input-container ._error-validation ~ .input-text {
+  color: #FF3008;
+}
+
+.message ._error-validation {
+  border: 2px solid #FF3008;
+  -webkit-box-shadow: 0px 0px 10px #FF3008;
+          box-shadow: 0px 0px 10px #FF3008;
+}
+.message ._error-validation:focus + .placeholder-textarea {
+  color: #FF3008;
+}
+.message ._error-validation ~ .placeholder-textarea {
+  color: #FF3008;
 }
 
 .location {
@@ -1799,17 +1847,17 @@ header .connecting .instargam a:hover {
   font-size: calc( 15px + 10 * ((100vw - 320px) / 1600) );
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 10px;
-  color: black;
+  color: #2B2B2B;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
   display: none;
 }
 .location_accordeon .accordion-item .accordion-item-content a {
-  font-weight: 400;
-  color: black;
+  font-weight: 200;
+  color: white;
 }
 .location_container {
   min-width: 600px;
@@ -2249,6 +2297,7 @@ header .connecting .instargam a:hover {
 
   .feedback_form-container {
     width: 100%;
+    padding: 25px 10px 10px 10px;
   }
 
   .feedback_text-title {

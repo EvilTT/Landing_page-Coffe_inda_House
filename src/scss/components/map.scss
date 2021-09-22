@@ -41,13 +41,13 @@
                 @extend %Font-Inter;
                 border-bottom-right-radius: 10px;
                 border-bottom-left-radius: 10px;
-                font-weight: 300;
+                font-weight: 400;
                 padding: 10px;    
-                color: black;
+                color: $black;
                 transition: 0.2s;
                 a{
-                    font-weight: 400;
-                    color: black;
+                    font-weight: 200;
+                    color: white;
                 }  
                 display: none;
             }

@@ -73,6 +73,14 @@
     @include adaptiv-font(15, 10);
 }
 
+#textInArea{
+    top: -20px;
+    left: 5px;
+    font-weight: 500;
+    color: $black;
+    @include adaptiv-font(25, 15);
+}
+
 .title-contact{
     @include adaptiv-font(25, 15);
     @extend %Font-Inter;
@@ -123,6 +131,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     textarea{
         width: 100%;
         min-height: 100px;
@@ -141,6 +150,24 @@
         &:hover, &:focus{
             @include glassMorShadow;
         }
+        &:focus + .placeholder-textarea{
+            top: -20px;
+            left: 5px;
+            font-weight: 500;
+            color: $black;
+            @include adaptiv-font(25, 15);
+        }
+    }
+    .placeholder-textarea{
+        position: absolute;
+        @include adaptiv-font(28, 18);
+        @extend %Font-Monrope;
+        font-weight: 300;
+        color: #A0929F;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        left: 10px;
+        top: 10px;
     }
     .privacy-policy{
         display: flex;
@@ -281,7 +308,7 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
     transition: all 0.3s ease;
     padding-left: 30px;
-    @include adaptiv-font(25, 15);
+    @include adaptiv-font(25, 20);
     line-height: 25px;
     .title{
         text-transform: uppercase;
@@ -355,6 +382,25 @@ $text-color: mix(#000, $primary-color, 64%);
 .input-container{
     ._error-validation{
         border: 2px solid #FF3008;
+        box-shadow: 0px 0px 10px #FF3008;
+        &:focus + .input-text{
+            color: #FF3008;
+        }
+    }
+    ._error-validation ~ .input-text{
+        color: #FF3008;
     }
 }
 
+.message{
+    ._error-validation{
+        border: 2px solid #FF3008;
+        box-shadow: 0px 0px 10px #FF3008;
+        &:focus + .placeholder-textarea{
+            color: #FF3008;
+        }
+    }
+    ._error-validation ~ .placeholder-textarea{
+        color: #FF3008;
+    }
+}
