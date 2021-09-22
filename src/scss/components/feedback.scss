@@ -308,7 +308,7 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
     transition: all 0.3s ease;
     padding-left: 30px;
-    @include adaptiv-font(25, 20);
+    @include adaptiv-font(20, 17);
     line-height: 25px;
     .title{
         text-transform: uppercase;

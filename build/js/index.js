@@ -5,6 +5,8 @@ const arrow = document.querySelector('.arrow_container')
 const closeDiv = document.querySelector('.menu_position__nav')
 const btnColor = document.querySelector('.btn')
 
+let currentGradient = undefined
+
 window.addEventListener('DOMContentLoaded', () => {
     let map = document.querySelector('IFRAME')
     if(window.innerWidth <= 530){
@@ -46,9 +48,16 @@ document.body.addEventListener('click', (event) => {
             ['#B55EC2', '#B5A7B6', '#CB6328', '#BCA79D'],
             ['#B55EC2', '#55A1FF', '#55A1FF', '#28FCF1'],
         ]
-        let numberOfGradient = Math.round(
+        let generateNumber = () => Math.round(
             Math.random() * (gradienBAckground.length - 1) + 1
         )
+        let numberOfGradient = undefined
+        do {
+            numberOfGradient = generateNumber()
+        } while (numberOfGradient === currentGradient);
+        currentGradient = numberOfGradient
+        console.log(numberOfGradient-1);
+        
         document.body.style.background = `linear-gradient(147deg, ${
             gradienBAckground[numberOfGradient - 1][0]
         } 0%, ${gradienBAckground[numberOfGradient - 1][1]} 33%, ${

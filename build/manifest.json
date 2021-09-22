@@ -1,5 +1,6 @@
 {
     "short_name": "Coffee inda House",
+    "name": "Coffee inda House",
     "icons":[
         {
             "src":"/favicons/android-chrome-192x192.png",

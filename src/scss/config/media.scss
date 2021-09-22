@@ -376,6 +376,9 @@
         top: 200px;
       }
     }
+    .feedback_text-title p {
+        text-align: justify;
+    }
   }
   
 
@@ -396,10 +399,6 @@
     }
     .feedback_text-title{
         line-height: 17px;
-        p{
-            text-align: justify;
-            font-size: 13px;
-        }
     }
     .blog-slider{
         padding: 10px;
