@@ -17,24 +17,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.onload = () => {
     document.body.classList.remove('send')
-    let resolve = 'Servise Worker - Active!'
-    let rejected = 'Servise Worker - Active Fail'
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('./service-worker.js')
-            .then(() =>
-                console.log(
-                    `%c${resolve}`,
-                    'color: green; font-weight: 700; font-size: 18px'
-                )
-            )
-            .catch(() =>
-                console.log(
-                    `%c${rejected}`,
-                    'color: red; font-weight: 700; font-size: 18px'
-                )
-            )
-    }
+    // PWA install
+    // let resolve = 'Servise Worker - Active!'
+    // let rejected = 'Servise Worker - Active Fail'
+    // if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker
+    //         .register('./service-worker.js')
+    //         .then(() =>
+    //             console.log(
+    //                 `%c${resolve}`,
+    //                 'color: green; font-weight: 700; font-size: 18px'
+    //             )
+    //         )
+    //         .catch(() =>
+    //             console.log(
+    //                 `%c${rejected}`,
+    //                 'color: red; font-weight: 700; font-size: 18px'
+    //             )
+    //         )
+    // }
 }
 
 document.body.addEventListener('click', (event) => {

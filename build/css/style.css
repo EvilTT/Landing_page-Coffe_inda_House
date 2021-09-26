@@ -701,8 +701,7 @@ section .container {
   transition: 0.3s;
 }
 .menu_navigation.open_nav {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  background: rgba(66, 66, 66, 0.863);
 }
 .menu_position {
   display: -webkit-box;

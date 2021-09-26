@@ -17,8 +17,8 @@
         transition: 0.3s;
     }
     &_navigation.open_nav{
-         backdrop-filter: blur( 5.0px );
-        // background: rgba(66, 66, 66, 0.863);
+        //  backdrop-filter: blur( 5.0px );
+        background: rgba(66, 66, 66, 0.863);
 
     }
     &_position{
