@@ -19,6 +19,23 @@ p, h1, h2, h3, h4, h5, h6{
     padding: 0px;
 }
 
+.eruda{
+    width: 90%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    @include adaptiv-font(25, 20);
+    z-index: 2000;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.726);
+    @extend %Font-Monrope;
+    color: white;
+    font-weight: 500;
+    @include glassMorShadow;
+    text-align: center;
+}
 .copyright{
     @include adaptiv-font(15, 10);
     margin-bottom: 10px;

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="theme-color" content="#2B2B2B">
-    <meta name="description" content="Кофе-бар, кофе с собой. Разнообразные виды кофе, десертов, чаев, фрешей и пуншей. А так же умопомрачительные коктейли!">
+    <meta name="description" content="Кофе-бар, кофе с собой. Разнообразные виды кофе, десертов, чаев, фрешей и пуншей. А так же пьянящие коктейли!">
     <link type="image/x-icon" rel="shortcut icon" href="./favicons/favicon.ico">
     <link sizes="180x180" rel="apple-touch-icon" href="./favicons/apple-touch-icon.png">
     <link rel="stylesheet" href="./css/preloader.css">
@@ -972,11 +972,11 @@
                             <!--! Имя и Фамилия -->
                             <div class="form_fullname">
                                 <div class="input-container">
-                                    <input id='name' type="text" class="fullName" data-req='req' name="name">
+                                    <input id='name' autocomplete="off" type="text" class="fullName" data-req='req' name="name">
                                     <label for="name" class="input-text">Имя</label>
                                 </div>
                                 <div class="input-container">
-                                    <input id='surname' type="text" class="fullName" data-req='req' name="surname">
+                                    <input id='surname' autocomplete="off" type="text" class="fullName" data-req='req' name="surname">
                                     <label for='surname' class="input-text">Фамилия</label>
                                 </div>
                             </div>
@@ -1003,7 +1003,7 @@
 
                             <div class="contact-input">
                                 <div class="input-container">
-                                    <input id='contact-info' type="email" class="fullName" data-req='req'
+                                    <input id='contact-info' autocomplete="off" type="email" class="fullName" data-req='req'
                                         name="contact-info">
                                     <label for="contact-info" class="input-text contact-text">E-mail</label>
                                 </div>

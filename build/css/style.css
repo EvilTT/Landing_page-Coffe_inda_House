@@ -391,7 +391,7 @@ template {
   font-family: "Ethnocentric-Regular";
 }
 
-.location_accordeon .accordion-item .accordion-item-header, .message .placeholder-textarea, .input-container .input-text, .blog-slider, .content-wrapper .content_text .title {
+.location_accordeon .accordion-item .accordion-item-header, .message .placeholder-textarea, .input-container .input-text, .blog-slider, .content-wrapper .content_text .title, .eruda {
   font-family: "Manrope", sans-serif;
 }
 
@@ -407,6 +407,24 @@ html {
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   padding: 0px;
+}
+
+.eruda {
+  width: 90%;
+  padding: 10px 0px;
+  border-radius: 10px;
+  font-size: calc( 20px + 5 * ((100vw - 320px) / 1600) );
+  z-index: 2000;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: white;
+  font-weight: 500;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  text-align: center;
 }
 
 .copyright {
@@ -678,6 +696,9 @@ section .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .menu_navigation.open_nav {
   -webkit-backdrop-filter: blur(5px);
@@ -1503,7 +1524,7 @@ header .connecting .instargam a:hover {
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 .message textarea:focus + .placeholder-textarea {
-  top: -20px;
+  top: -25px;
   left: 5px;
   font-weight: 500;
   color: #2B2B2B;

@@ -1,4 +1,4 @@
-const cashVersion = 'cash-pwa-cih-v1'
+const cashVersion = 'cash-pwa-cih-v3'
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
