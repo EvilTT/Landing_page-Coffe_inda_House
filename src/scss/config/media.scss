@@ -192,7 +192,7 @@
       }
       &__code{
           margin-bottom: 20px;
-          margin-top: 5px;
+          margin-top: 15px;
       }
     }
   }
@@ -365,15 +365,17 @@
       }
     }
     .blog-slider{
+    padding: 10px;
       width: 100%;
       &__content{
         margin-top: -90px;
       }
       &__code{
         font-size: 17px;
+        margin-top: 0px;
       }
       &__pagination{
-        top: 200    px;
+        top: 195px;
       }
     }
   }
@@ -396,9 +398,6 @@
     }
     .feedback_text-title{
         line-height: 17px;
-    }
-    .blog-slider{
-        padding: 10px;
     }
 }
 

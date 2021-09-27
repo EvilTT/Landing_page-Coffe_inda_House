@@ -68,40 +68,29 @@ document.body.addEventListener('click', (event) => {
         let cordOfScroll = document.querySelector(unker)
         cordOfScroll.scrollIntoView({
             behavior: "smooth"
-        })
-        
-        console.log('Scroll');
+        })        
         return
     }
     //! Random gradient background
     if (btnColor.contains(event.target)) {
         event.preventDefault()
         const gradienBAckground = [
-            ['#845EC2', '#B39CD0', '#FBEAFF', '#00C9A7'],
-            ['#845EC2', '#B0A8B9', '#C34A36', '#BEA6A0'],
-            ['#845EC2', '#009EFA', '#00D2FC', '#4FFBDF'],
-            ['#845EC2', '#C493FF', '#FEFEDF', '#D5CABD'],
-            ['#845EC2', '#C197FF', '#00C9A7', '#005B44'],
-            ['#B55EC2', '#D2A7D7', '#FFE7FF', '#5CBAB3'],
-            ['#B55EC2', '#B5A7B6', '#CB6328', '#BCA79D'],
-            ['#B55EC2', '#55A1FF', '#55A1FF', '#28FCF1'],
+            ['linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)'],
+            ['linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)']
         ]
         let generateNumber = () =>
             Math.round(Math.random() * (gradienBAckground.length - 1) + 1)
-        let numberOfGradient = undefined
-        //! ===
-        do {
-            numberOfGradient = generateNumber()
-        } while (numberOfGradient === currentGradient)
-        currentGradient = numberOfGradient
-        console.log(numberOfGradient - 1)
-        //!! ===
+            
 
-        document.body.style.background = `linear-gradient(147deg, ${
-            gradienBAckground[numberOfGradient - 1][0]
-        } 0%, ${gradienBAckground[numberOfGradient - 1][1]} 33%, ${
-            gradienBAckground[numberOfGradient - 1][2]
-        } 66%, ${gradienBAckground[numberOfGradient - 1][3]} 100%)`
+        while(true){
+            let numberOfGradient = generateNumber()
+            if(numberOfGradient !== currentGradient){
+                currentGradient = numberOfGradient
+                break
+            } 
+        }
+
+        document.body.style.background = gradienBAckground[currentGradient-1]
         return
     }
     //eruda initialize (mobile console)

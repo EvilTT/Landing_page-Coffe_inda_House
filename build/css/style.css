@@ -434,9 +434,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   background-size: cover;
-  background-color: #31bfff;
-  background: -o-linear-gradient(303deg, #31bfff 0%, #5267ff 25%, #f66ee8 50%, #ed4de4 75%, #9500f7 100%);
-  background: linear-gradient(147deg, #31bfff 0%, #5267ff 25%, #f66ee8 50%, #ed4de4 75%, #9500f7 100%);
+  background-color: #21D4FD;
+  background-image: -webkit-gradient(linear, left top, right top, from(#21D4FD), to(#B721FF));
+  background-image: -o-linear-gradient(left, #21D4FD 0%, #B721FF 100%);
+  background-image: linear-gradient(90deg, #21D4FD 0%, #B721FF 100%);
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -476,22 +477,22 @@ section .container {
 }
 
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 7px;
   /* ширина для вертикального скролла */
-  height: 8px;
+  height: 7px;
   /* высота для горизонтального скролла */
-  background: rgba(230, 230, 230, 0.781);
+  background-color: #636363;
   border: none;
 }
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(90, 90, 90, 0.822);
+  background-color: #2B2B2B;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(52, 52, 52, 0.822);
+  background-color: #121212;
 }
 
 .arrow_container {
@@ -697,7 +698,9 @@ section .container {
   transition: 0.3s;
 }
 .menu_navigation.open_nav {
-  background: rgba(53, 53, 53, 0.747);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(70, 70, 70, 0.541);
 }
 .menu_position {
   display: -webkit-box;
@@ -938,8 +941,7 @@ header .connecting .instargam a:hover {
   min-height: 350px;
   width: 100%;
   height: 100%;
-  background: rgba(66, 66, 66, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.37);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border: none;
@@ -1230,7 +1232,7 @@ header .connecting .instargam a:hover {
 }
 .blog-slider__code {
   font-size: 20px;
-  color: #7b7992;
+  color: #5a5a5a;
   margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1656,6 +1658,8 @@ header .connecting .instargam a:hover {
 }
 .buttons-form .clear:hover {
   background-color: #FE1F20;
+  -webkit-box-shadow: 0px 0px 5px #FE1F20, 0px 0px 10px #FE1F20, 0px 0px 15px #FE1F20;
+          box-shadow: 0px 0px 5px #FE1F20, 0px 0px 10px #FE1F20, 0px 0px 15px #FE1F20;
 }
 .buttons-form .submit {
   margin-right: 20px;
@@ -1683,7 +1687,9 @@ header .connecting .instargam a:hover {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
 }
 .buttons-form .submit:hover {
-  background-color: #65C466;
+  background-color: #00A86B;
+  -webkit-box-shadow: 0px 0px 5px #00A86B, 0px 0px 10px #00A86B, 0px 0px 15px #00A86B;
+          box-shadow: 0px 0px 5px #00A86B, 0px 0px 10px #00A86B, 0px 0px 15px #00A86B;
 }
 
 .feedback_text-title {
@@ -1770,27 +1776,27 @@ header .connecting .instargam a:hover {
 }
 
 .input-container ._error-validation {
-  border: 2px solid #FF3008;
-  -webkit-box-shadow: 0px 0px 10px #FF3008;
-          box-shadow: 0px 0px 10px #FF3008;
+  border: 2px solid red;
+  -webkit-box-shadow: 0px 0px 5px red;
+          box-shadow: 0px 0px 5px red;
 }
 .input-container ._error-validation:focus + .input-text {
-  color: #FF3008;
+  color: red;
 }
 .input-container ._error-validation ~ .input-text {
-  color: #FF3008;
+  color: red;
 }
 
 .message ._error-validation {
-  border: 2px solid #FF3008;
-  -webkit-box-shadow: 0px 0px 10px #FF3008;
-          box-shadow: 0px 0px 10px #FF3008;
+  border: 2px solid red;
+  -webkit-box-shadow: 0px 0px 5px red;
+          box-shadow: 0px 0px 5px red;
 }
 .message ._error-validation:focus + .placeholder-textarea {
-  color: #FF3008;
+  color: red;
 }
 .message ._error-validation ~ .placeholder-textarea {
-  color: #FF3008;
+  color: red;
 }
 
 .location {
@@ -2169,7 +2175,7 @@ header .connecting .instargam a:hover {
   }
   .blog-slider__code {
     margin-bottom: 20px;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 }
 @media (max-width: 560px) {
@@ -2365,6 +2371,7 @@ header .connecting .instargam a:hover {
   }
 
   .blog-slider {
+    padding: 10px;
     width: 100%;
   }
   .blog-slider__content {
@@ -2372,9 +2379,10 @@ header .connecting .instargam a:hover {
   }
   .blog-slider__code {
     font-size: 17px;
+    margin-top: 0px;
   }
   .blog-slider__pagination {
-    top: 200 px;
+    top: 195px;
   }
 }
 @media (max-width: 375px) {
@@ -2394,10 +2402,6 @@ header .connecting .instargam a:hover {
 
   .feedback_text-title {
     line-height: 17px;
-  }
-
-  .blog-slider {
-    padding: 10px;
   }
 }
 @media (max-width: 320px) {
