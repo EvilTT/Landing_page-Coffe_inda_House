@@ -57,10 +57,6 @@ document.body.addEventListener('click', (event) => {
     //! scroll btn
     if(event.target.closest('.arrow_container')){
         event.preventDefault()
-        // let stopScroll = setInterval(() => {
-        //     if(document.documentElement.scrollTop <= 0) clearInterval(stopScroll)
-        //     document.documentElement.scrollTop = document.documentElement.scrollTop - 90
-        // },15)
         window.scroll({ top: 0, left: 0, behavior: 'smooth' })
         return
     } 
@@ -72,7 +68,7 @@ document.body.addEventListener('click', (event) => {
             behavior: "smooth"
         })
         
-        console.log('scrollIntoViev');
+        console.log('Scroll');
         return
     }
     //! Random gradient background

@@ -68,14 +68,12 @@
     max-width: 1000px;
     @include glassmorphizm;
     @include glassMorShadow;
-    backdrop-filter: blur( 0px );
-    -webkit-backdrop-filter:blur(0px);
     background-color: rgba(255, 255, 255, 0.37);
     padding: 25px;
     border-radius: 25px;
     height: 350px;
     transition: all .3s;
-        
+    position: relative;
   &__item {
     display: flex;
     align-items: center;
