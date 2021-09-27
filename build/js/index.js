@@ -59,18 +59,19 @@ document.body.addEventListener('click', (event) => {
         event.preventDefault()
         let stopScroll = setInterval(() => {
             if(document.documentElement.scrollTop <= 0) clearInterval(stopScroll)
-            document.documentElement.scrollTop = document.documentElement.scrollTop - 100
-        },20)
+            document.documentElement.scrollTop = document.documentElement.scrollTop - 90
+        },15)
         return
     } 
     if(event.target.closest('.menu_position')){
         event.preventDefault()
         let unker = event.target.closest('.menu_position').dataset.help
         let cordOfScroll = document.querySelector(unker).getBoundingClientRect().top
-        window.scrollBy({
+        window.scrollTo({
             top: cordOfScroll,
             behavior: 'smooth'
         })
+        console.log('scrollTo');
         return
     }
     //! Random gradient background
