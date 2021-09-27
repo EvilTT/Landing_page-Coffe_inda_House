@@ -400,10 +400,6 @@ template {
           box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   padding: 0px;
@@ -701,7 +697,8 @@ section .container {
   transition: 0.3s;
 }
 .menu_navigation.open_nav {
-  background: rgba(66, 66, 66, 0.863);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .menu_position {
   display: -webkit-box;
@@ -725,13 +722,13 @@ section .container {
   -webkit-box-shadow: 2px 2px 4px rgba(211, 211, 211, 0.26);
           box-shadow: 2px 2px 4px rgba(211, 211, 211, 0.26);
 }
-.menu_position:hover .icon_container > a > i {
+.menu_position:hover .icon_container > i {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
   color: #2B2B2B;
 }
-.menu_position:hover .menu_text > a {
+.menu_position:hover .menu_text {
   color: #2B2B2B;
 }
 .menu_position__nav {
@@ -769,9 +766,9 @@ section .container {
 .menu_text {
   font-size: calc( 20px + 5 * ((100vw - 320px) / 1600) );
   overflow: hidden;
-  -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
   padding: 0px 10px 0px 7px;
   font-weight: 200;
   margin-left: -400px;
@@ -779,13 +776,7 @@ section .container {
       -ms-transform: translateX(-25px);
           transform: translateX(-25px);
   opacity: 0;
-}
-.menu_text a {
   color: lightgray;
-  text-decoration: none;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .open-menu {
@@ -801,13 +792,13 @@ section .container {
   -webkit-box-shadow: 1px 1px 4px rgba(211, 211, 211, 0.26);
           box-shadow: 1px 1px 4px rgba(211, 211, 211, 0.26);
 }
-.active-navigation-tab .icon_container > a > i {
+.active-navigation-tab .icon_container > i {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
   color: #2B2B2B;
 }
-.active-navigation-tab .menu_text > a {
+.active-navigation-tab .menu_text {
   color: #2B2B2B;
 }
 
@@ -1095,8 +1086,8 @@ header .connecting .instargam a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
-          backdrop-filter: blur(0px);
   background-color: rgba(255, 255, 255, 0.37);
   padding: 25px;
   border-radius: 25px;

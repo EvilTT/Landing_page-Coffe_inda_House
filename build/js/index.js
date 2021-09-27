@@ -50,6 +50,25 @@ document.body.addEventListener('click', (event) => {
         closeDiv.querySelector('i').classList.toggle('icon-close')
         return
     }
+    //! scroll btn
+    if(event.target.closest('.arrow_container')){
+        event.preventDefault()
+        let stopScroll = setInterval(() => {
+            if(document.documentElement.scrollTop <= 0) clearInterval(stopScroll)
+            document.documentElement.scrollTop = document.documentElement.scrollTop - 100
+        },10)
+        return
+    } 
+    if(event.target.closest('.menu_position')){
+        event.preventDefault()
+        let unker = event.target.closest('.menu_position').dataset.help
+        let cordOfScroll = document.querySelector(unker).getBoundingClientRect().top
+        window.scrollBy({
+            top: cordOfScroll,
+            behavior: 'smooth'
+        })
+        return
+    }
     //! Random gradient background
     if (btnColor.contains(event.target)) {
         event.preventDefault()

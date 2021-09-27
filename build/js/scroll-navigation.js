@@ -4,13 +4,11 @@ window.addEventListener('DOMContentLoaded', () => {
             const id = entry.target.getAttribute('id')
             if (entry.intersectionRatio > 0) {
                 document
-                    .querySelector(`.icon_container a[href="#${id}"]`)
-                    .closest('.menu_position')
+                    .querySelector(`.menu_position[data-help="#${id}"]`)
                     .classList.add('active-navigation-tab')
             } else {
                 document
-                    .querySelector(`.icon_container a[href="#${id}"]`)
-                    .closest('.menu_position')
+                    .querySelector(`.menu_position[data-help="#${id}"]`)
                     .classList.remove('active-navigation-tab')
             }
         })
