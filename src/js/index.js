@@ -60,7 +60,7 @@ document.body.addEventListener('click', (event) => {
         let stopScroll = setInterval(() => {
             if(document.documentElement.scrollTop <= 0) clearInterval(stopScroll)
             document.documentElement.scrollTop = document.documentElement.scrollTop - 100
-        },10)
+        },20)
         return
     } 
     if(event.target.closest('.menu_position')){
