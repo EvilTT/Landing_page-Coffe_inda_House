@@ -8,6 +8,8 @@ let count = 0
 
 let currentGradient = undefined
 
+
+
 window.addEventListener('DOMContentLoaded', () => {
     let map = document.querySelector('IFRAME')
     if (window.innerWidth <= 530) {
