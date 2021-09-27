@@ -66,12 +66,12 @@ document.body.addEventListener('click', (event) => {
     if(event.target.closest('.menu_position')){
         event.preventDefault()
         let unker = event.target.closest('.menu_position').dataset.help
-        let cordOfScroll = document.querySelector(unker).getBoundingClientRect().top
-        window.scrollTo({
-            top: cordOfScroll,
-            behavior: 'smooth'
+        let cordOfScroll = document.querySelector(unker)
+        cordOfScroll.scrollIntoView({
+            behavior: "smooth"
         })
-        console.log('scrollTo');
+        
+        console.log('scrollIntoViev');
         return
     }
     //! Random gradient background
