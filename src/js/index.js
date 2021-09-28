@@ -94,18 +94,16 @@ document.body.addEventListener('click', (event) => {
         return
     }
     //eruda initialize (mobile console)
-    if (
-        event.target.tagName === 'P' ||
-        event.target.contains(document.querySelector('catalog_text-title'))
-    ) {
+    if (event.target.classList.contains('title')) {
+        console.log('sda');
         count++
         if (count >= 10 && document.querySelector('.eruda') === null) {
             let script = document.createElement('script')
-            script.src = '//cdn.jsdelivr.net/npm/eruda'
+            script.src = 'https://cdn.jsdelivr.net/npm/eruda'
             document.body.append(script)
 
             script.onload = () => {
-                console.log('Eruda active')
+                console.log('Eruda onload')
                 let modal = document.createElement('div')
                 modal.innerHTML = 'Mobile console active!'
                 modal.className = 'eruda'

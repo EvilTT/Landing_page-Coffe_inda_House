@@ -151,7 +151,7 @@
   }
   
   &__title {
-    @include adaptiv-font(30, 20);
+    @include adaptiv-font(30, 25);
     font-weight: 700;
     color: $black;
     margin-bottom: 20px;
