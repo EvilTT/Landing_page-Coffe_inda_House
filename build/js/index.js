@@ -95,10 +95,13 @@ document.body.addEventListener('click', (event) => {
     }
     //eruda initialize (mobile console)
     if (event.target.classList.contains('title')) {
-        console.log('sda');
         count++
+        console.log(`Click on "О нас" - ${count}`);
         if (count >= 10 && document.querySelector('.eruda') === null) {
+
+            count = 0
             let script = document.createElement('script')
+            script.classList.add('eruda')
             script.src = 'https://cdn.jsdelivr.net/npm/eruda'
             document.body.append(script)
 

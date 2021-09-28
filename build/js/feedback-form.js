@@ -17,9 +17,15 @@ const validateError = (errorsFiel) => {
     errorsFiel.classList.add('_error-validation')
 }
 
-const generateModal = (message) => {
+const generateModal = (message, bcColor) => {
     let modal = document.createElement('div')
-    console.log(message);
+    modal.className = 'response-modal'
+    modal.innerHTML = message
+    modal.style.backgroundColor = bcColor
+    document.body.prepend(modal)
+    setTimeout(() => {
+        modal.remove()
+        }, 2000)
 }
 
 form.addEventListener('focusout', (event) => {
@@ -74,26 +80,46 @@ const validateFullname = (valueOfFullName) =>
 
 
 const toMail = dataForm => {
-    let formData = new FormData(dataForm)
-   
-    fetch('mail.php', {
-        body: formData,
-        method: 'POST'
-    })
-    .then(response => {
-        if(response.ok){
-            document.body.classList.remove('send') 
-            console.log(response.json());
-            console.log('Okey');
-        }else{
-            throw new Error('Произошла ошибка')
+    
+    for(let item of document.querySelectorAll('INPUT[name="isVisited"]')){
+        if(item.checked){
+            dataForm.attandence = item.value
+            break
         }
-    }).catch(err => generateModal(err.message))
+    }
+    //* активация EmailJS 
+    emailjs.init('user_VXF2bC1Ly2Cf3nlgdUt0k')
+
+    //* отправка формы
+    emailjs.send("service_46t0xhk","template_aivc1cs", dataForm)
+    .then(response => {
+        console.log(response);
+        if(response.status === 200){
+            form.reset()
+            document.body.classList.remove('send')
+            generateModal('Успешно отправлено', '#00A86B')
+        }else{
+            document.body.classList.remove('send')
+            generateModal('Произошла ошибка!', '#FE1F20')
+        }
+    }).catch(error => {
+        console.log(error)
+        document.body.classList.remove('send')
+        generateModal("Ошибка сети!", '#FE1F20')
+    })
 }
 
 const formValidation = () => {
     let requiredElements = document.querySelectorAll('[data-req=req]')
     let errors = 0
+    let contacrForm = {
+        from_name: "",
+        from_surname: '',
+        from_contact: "",
+        policy_con: "",
+        attandence: "",
+        message: "",
+    }
     for (let field of requiredElements) {
         switch (field.name) {
             case 'text-message':
@@ -101,11 +127,13 @@ const formValidation = () => {
                     validateError(field)
                     errors++
                 }else{
+                    contacrForm.message = field.value
                     removeError(field)
                 }
                 break
             case 'name':
                 if (validateFullname(field.value)) {
+                    contacrForm.from_name = field.value
                     removeError(field)
                 } else {
                     validateError(field)
@@ -114,6 +142,7 @@ const formValidation = () => {
                 break
             case 'surname':
                 if (validateFullname(field.value)) {
+                    contacrForm.from_surname = field.value
                     removeError(field)
                 } else {
                     validateError(field)
@@ -125,6 +154,7 @@ const formValidation = () => {
                 switch (field.type) {
                     case 'email':
                         if (validateEmail(field.value)) {
+                            contacrForm.from_contact = field.value
                             removeError(field)
                         } else {
                             validateError(field)
@@ -134,6 +164,7 @@ const formValidation = () => {
 
                     case 'telephone':
                         if (validateTel(field.value)) {
+                            contacrForm.from_contact = field.value
                             removeError(field)
                         } else {
                             validateError(field)
@@ -145,17 +176,17 @@ const formValidation = () => {
 
             case 'privacy-policy':
                 if (!field.checked) errors++
+                contacrForm.policy_con = 'Отправитель ознакомлен'
                 break
         }
     }
     if (errors === 0) {
         document.body.querySelector('.load').style.top = window.pageYOffset + 'px'
         document.body.classList.add('send')
-        setTimeout(() => {
-            document.body.classList.remove('send')
-        }, 4000)
-        // toMail(form)
-        console.log('Validate form!');
+        // setTimeout(() => {
+        //     document.body.classList.remove('send')
+        // }, 4000)
+        toMail(contacrForm)
     }else{
         document.querySelector('.feedback').scrollIntoView(true)
     }

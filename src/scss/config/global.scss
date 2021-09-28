@@ -21,13 +21,31 @@ p, h1, h2, h3, h4, h5, h6{
     border-radius: 10px;
     @include adaptiv-font(25, 20);
     z-index: 2000;
-    bottom: 5%;
+    bottom: 30px;
     left: 5%;
     right: 5%;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.726);
     @extend %Font-Monrope;
     color: white;
+    font-weight: 500;
+    @include glassMorShadow;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+}
+
+.response-modal{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+    width: 90%;
+    left: 5%;
+    padding: 25px 5px;
+    bottom: 30px;
+    border-radius: 10px;
+    @include adaptiv-font(35, 25);
+    @extend %Font-Monrope;
+    position: fixed;
+    color: white;
+    z-index: 2000;
     font-weight: 500;
     @include glassMorShadow;
     text-align: center;

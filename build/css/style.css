@@ -391,7 +391,7 @@ template {
   font-family: "Ethnocentric-Regular";
 }
 
-.location_accordeon .accordion-item .accordion-item-header, .message .placeholder-textarea, .input-container .input-text, .blog-slider, .content-wrapper .content_text .title, .eruda {
+.location_accordeon .accordion-item .accordion-item-header, .message .placeholder-textarea, .input-container .input-text, .blog-slider, .content-wrapper .content_text .title, .response-modal, .eruda {
   font-family: "Manrope", sans-serif;
 }
 
@@ -411,12 +411,30 @@ p, h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   font-size: calc( 20px + 5 * ((100vw - 320px) / 1600) );
   z-index: 2000;
-  bottom: 5%;
+  bottom: 30px;
   left: 5%;
   right: 5%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.726);
   color: white;
+  font-weight: 500;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+}
+
+.response-modal {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+  width: 90%;
+  left: 5%;
+  padding: 25px 5px;
+  bottom: 30px;
+  border-radius: 10px;
+  font-size: calc( 25px + 10 * ((100vw - 320px) / 1600) );
+  position: fixed;
+  color: white;
+  z-index: 2000;
   font-weight: 500;
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
