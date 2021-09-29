@@ -76,12 +76,13 @@ document.body.addEventListener('click', (event) => {
         event.preventDefault()
         const gradienBAckground = [
             ['linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)'],
-            ['linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)']
+            ['linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)'],
+            ['linear-gradient(90deg, #21D4FD 0%, #B721FF 100%)']
         ]
+
         let generateNumber = () =>
             Math.round(Math.random() * (gradienBAckground.length - 1) + 1)
             
-
         while(true){
             let numberOfGradient = generateNumber()
             if(numberOfGradient !== currentGradient){
