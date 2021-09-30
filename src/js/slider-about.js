@@ -20,5 +20,14 @@ document.querySelector('.icon-sreen').addEventListener('click', function(event){
   document.body.classList.toggle('fullScreen')
   
   let icon = this.querySelector('I')
-  icon.classList.contains('fas fa-expand') ? icon.className = iconCloseFullScreen : icon.className = iconFullScreen
-})
+  
+  switch(icon.className){
+    case iconFullScreen:
+      icon.className = iconCloseFullScreen
+      break
+    
+    case iconCloseFullScreen:
+      icon.className = iconFullScreen
+      break
+  }
+})  

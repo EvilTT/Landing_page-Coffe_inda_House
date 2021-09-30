@@ -18,7 +18,6 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            transition: 0.3s;
             .icon-sreen{
                 position: absolute;
                 color: #fff;
@@ -75,11 +74,12 @@
         margin-left: 40px;
         height: 100%;
         .title{
-            @extend %Font-Monrope;
-            color: $black;
-            text-align: center;
+            @extend %Font-Logo;
             @include adaptiv-font(50, 35);
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+            @extend %Font-Logo;
+            color: $black;
+            text-align: center;
             padding-bottom: 20px;
             font-weight: 500;
         }

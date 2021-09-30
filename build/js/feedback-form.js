@@ -29,6 +29,16 @@ const generateModal = (message, bcColor) => {
 }
 
 form.addEventListener('focusout', (event) => {
+    if(event.isTrusted === false){
+        let inputs = document.querySelectorAll('#textInInput')
+        if(!inputs) return
+        inputs.length === 1 ? inputs.id = '' : inputs.forEach(item => item.id = '')
+
+        let area = document.getElementById('textInArea')
+        if(!area) return 
+        area.id = ''
+        return
+    }
     if(event.target.tagName === 'TEXTAREA'){
         event.target.value !== '' ? event.target.nextElementSibling.id = 'textInArea' : event.target.nextElementSibling.id = ''
     }
@@ -58,6 +68,7 @@ form.addEventListener('click', function (event) {
     if (event.target.classList.contains('clear')) {
         event.preventDefault()
         clearInputInForm()
+        generateEvent()
         return
     }
     if (event.target.classList.contains('submit')) {
@@ -78,7 +89,11 @@ const validateFullname = (valueOfFullName) =>
         ? true
         : false
 
-
+const generateEvent = () =>{
+    let event =  new Event('focusout', {bubbles: true})
+    form.dispatchEvent(event)
+    console.log('focusout');
+}
 const toMail = dataForm => {
     
     for(let item of document.querySelectorAll('INPUT[name="isVisited"]')){
@@ -96,6 +111,7 @@ const toMail = dataForm => {
         console.log(response);
         if(response.status === 200){
             form.reset()
+            generateEvent()
             document.body.classList.remove('send')
             generateModal('Успешно отправлено', '#00A86B')
         }else{
@@ -183,9 +199,6 @@ const formValidation = () => {
     if (errors === 0) {
         document.body.querySelector('.load').style.top = window.pageYOffset + 'px'
         document.body.classList.add('send')
-        // setTimeout(() => {
-        //     document.body.classList.remove('send')
-        // }, 4000)
         toMail(contacrForm)
     }else{
         document.querySelector('.feedback').scrollIntoView(true)

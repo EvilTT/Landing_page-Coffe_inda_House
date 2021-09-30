@@ -9,7 +9,7 @@ let count = 0
 let currentGradient = undefined
 
 
-
+//! size map of mobile
 window.addEventListener('DOMContentLoaded', () => {
     let map = document.querySelector('IFRAME')
     if (window.innerWidth <= 530) {
@@ -45,7 +45,7 @@ window.onload = () => {
 }
 
 document.body.addEventListener('click', (event) => {
-    //! open/close menu btn
+    //! open/close navigation menu
     if (
         event.target.classList.contains('menu_position__nav') ||
         closeDiv.contains(event.target)
@@ -56,12 +56,13 @@ document.body.addEventListener('click', (event) => {
         closeDiv.querySelector('i').classList.toggle('icon-close')
         return
     }
-    //! scroll btn
+    //! scroll to top btn
     if(event.target.closest('.arrow_container')){
         event.preventDefault()
         window.scroll({ top: 0, left: 0, behavior: 'smooth' })
         return
     } 
+    //! menu navigation scroll 
     if(event.target.closest('.menu_position')){
         event.preventDefault()
         let unker = event.target.closest('.menu_position').dataset.help
@@ -94,7 +95,7 @@ document.body.addEventListener('click', (event) => {
         document.body.style.background = gradienBAckground[currentGradient-1]
         return
     }
-    //eruda initialize (mobile console)
+    //!eruda initialize (mobile console)
     if (event.target.classList.contains('title')) {
         count++
         console.log(`Click on "О нас" - ${count}`);
@@ -116,7 +117,7 @@ document.body.addEventListener('click', (event) => {
 
                 setTimeout(() => {
                     modal.remove()
-                    }, 2000)
+                }, 2000)
             }
         }
     }
