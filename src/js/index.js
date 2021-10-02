@@ -78,7 +78,9 @@ document.body.addEventListener('click', (event) => {
         const gradienBAckground = [
             ['linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)'],
             ['linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)'],
-            ['linear-gradient(90deg, #21D4FD 0%, #B721FF 100%)']
+            ['linear-gradient(90deg, #21D4FD 0%, #B721FF 100%)'],
+            ['linear-gradient(90deg, #FAD961 0%, #ff701d 100%)'],
+            ['linear-gradient(90deg, #db2c7e 0%, #026773 50%, #00A49B 100%)']
         ]
 
         let generateNumber = () =>

@@ -50,7 +50,7 @@ header{
             background-color: rgba(255, 255, 255, 0.63);
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
             box-shadow: 1px 1px 4px rgba(59, 59, 59, 0.26);
-            color: $black;
+            color: $black  ;
             font-weight: 200;
             @include adaptiv-font(25, 15);
             @extend %Font-Inter;   
