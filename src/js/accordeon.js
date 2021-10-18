@@ -1,6 +1,6 @@
-const accordeon = document.querySelector('.location_accordeon')
+const accordeonCont = document.querySelector('.location_accordeon')
 
-accordeon.addEventListener('click', (event) => {
+accordeonCont.addEventListener('click', (event) => {
     if(event.target.classList.contains('accordion-item-header') || event.target.parentNode.classList.contains('accordion-item-header')){
         document.querySelectorAll('.accordion-item').forEach(item => {
             if(item.contains(event.target)) return

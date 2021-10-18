@@ -1,124 +1,98 @@
-'use strict'
+const navigationContainer = document.querySelectorAll('.menu_text')
+const btnScrollUp = document.querySelector('.arrow_container')
+const toggleNavigation = document.querySelector('.menu_position__nav')
+const changeBgColorBtn = document.querySelector('.btn')
 
-const menuText = document.querySelectorAll('.menu_text')
-const arrow = document.querySelector('.arrow_container')
-const closeDiv = document.querySelector('.menu_position__nav')
-const btnColor = document.querySelector('.btn')
-let count = 0
-
+let numberOfClickToTitle = 0
 let currentGradient = undefined
-
-
-//! size map of mobile
-window.addEventListener('DOMContentLoaded', () => {
-    let map = document.querySelector('IFRAME')
-    if (window.innerWidth <= 530) {
-        map.setAttribute('height', '350')
-    }
-})
 
 window.onload = () => {
     document.body.classList.remove('send')
-    // PWA install
-    // let resolve = 'Servise Worker - Active!'
-    // let rejected = 'Servise Worker - Active Fail'
-    // if ('serviceWorker' in navigator) {
-    //     navigator.serviceWorker
-    //         .register('./service-worker.js')
-    //         .then(() =>
-    //             console.log(
-    //                 `%c${resolve}`,
-    //                 'color: green; font-weight: 700; font-size: 18px'
-    //             )
-    //         )
-    //         .catch(() =>
-    //             console.log(
-    //                 `%c${rejected}`,
-    //                 'color: red; font-weight: 700; font-size: 18px'
-    //             )
-    //         )
-    // }
-    navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        for(let registration of registrations) {
-         registration.unregister()
-       } })
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+            registration.unregister()
+        }
+    })
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+    let mapIframe = document.querySelector('IFRAME')
+    if (window.innerWidth <= 530) {
+        mapIframe.setAttribute('height', '350')
+    }
+})
+
 document.body.addEventListener('click', (event) => {
-    //! open/close navigation menu
     if (
         event.target.classList.contains('menu_position__nav') ||
-        closeDiv.contains(event.target)
+        toggleNavigation.contains(event.target)
     ) {
         document.querySelector('.menu_navigation').classList.toggle('open_nav')
 
-        menuText.forEach((item) => item.classList.toggle('open-menu'))
-        closeDiv.querySelector('i').classList.toggle('icon-close')
+        navigationContainer.forEach((item) => item.classList.toggle('open-menu'))
+        toggleNavigation.querySelector('i').classList.toggle('icon-close')
         return
     }
-    //! scroll to top btn
-    if(event.target.closest('.arrow_container')){
+
+    if (event.target.closest('.arrow_container')) {
         event.preventDefault()
         window.scroll({ top: 0, left: 0, behavior: 'smooth' })
         return
-    } 
-    //! menu navigation scroll 
-    if(event.target.closest('.menu_position')){
+    }
+
+    if (event.target.closest('.menu_position')) {
         event.preventDefault()
         let unker = event.target.closest('.menu_position').dataset.help
         let cordOfScroll = document.querySelector(unker)
         cordOfScroll.scrollIntoView({
-            behavior: "smooth"
-        })        
+            behavior: 'smooth',
+        })
         return
     }
-    //! Random gradient background
-    if (btnColor.contains(event.target)) {
+
+    if (changeBgColorBtn.contains(event.target)) {
         event.preventDefault()
-        const gradienBAckground = [
+        const gradienBackground = [
             ['linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)'],
             ['linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)'],
             ['linear-gradient(90deg, #21D4FD 0%, #B721FF 100%)'],
             ['linear-gradient(90deg, #FAD961 0%, #ff701d 100%)'],
-            ['linear-gradient(90deg, #db2c7e 0%, #026773 50%, #00A49B 100%)']
+            ['linear-gradient(90deg, #db2c7e 0%, #026773 50%, #00A49B 100%)'],
         ]
 
-        let generateNumber = () =>
-            Math.round(Math.random() * (gradienBAckground.length - 1) + 1)
-            
-        while(true){
-            let numberOfGradient = generateNumber()
-            if(numberOfGradient !== currentGradient){
-                currentGradient = numberOfGradient
+        let randomNumber = () =>
+            Math.round(Math.random() * (gradienBackground.length - 1) + 1)
+
+        while (true) {
+            let gradientNumber = randomNumber()
+            if (gradientNumber !== currentGradient) {
+                currentGradient = gradientNumber
                 break
-            } 
+            }
         }
 
-        document.body.style.background = gradienBAckground[currentGradient-1]
+        document.body.style.background = gradienBackground[currentGradient - 1]
         return
     }
-    //!eruda initialize (mobile console)
-    if (event.target.classList.contains('title')) {
-        count++
-        console.log(`Click on "О нас" - ${count}`);
-        if (count >= 10 && document.querySelector('.eruda') === null) {
 
-            count = 0
+    if (event.target.classList.contains('title')) {
+        numberOfClickToTitle++
+        if (numberOfClickToTitle >= 10 && document.querySelector('.eruda') === null) {
+            numberOfClickToTitle = 0
             let script = document.createElement('script')
             script.classList.add('eruda')
             script.src = 'https://cdn.jsdelivr.net/npm/eruda'
             document.body.append(script)
 
             script.onload = () => {
-                console.log('Eruda onload')
-                let modal = document.createElement('div')
-                modal.innerHTML = 'Mobile console active!'
-                modal.className = 'eruda'
-                document.body.prepend(modal)
+                let modalOfErudaloaded = document.createElement('div')
+                modalOfErudaloaded.innerHTML = 'Mobile console active!'
+                modalOfErudaloaded.className = 'eruda'
+                document.body.prepend(modalOfErudaloaded)
                 eruda.init()
 
                 setTimeout(() => {
-                    modal.remove()
+                    modalOfErudaloaded.remove()
                 }, 2000)
             }
         }

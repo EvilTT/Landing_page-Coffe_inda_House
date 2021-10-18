@@ -15,19 +15,19 @@ const swiperAbout = new Swiper(".mySwiper", {
 let iconFullScreen = 'fas fa-expand'
 let iconCloseFullScreen = 'fas fa-compress'
 
-document.querySelector('.icon-sreen').addEventListener('click', function(event){
+document.querySelector('.icon-sreen').addEventListener('click', function(){
   this.parentNode.classList.toggle('bigImage')
   document.body.classList.toggle('fullScreen')
   
-  let icon = this.querySelector('I')
+  let currentIcon = this.querySelector('I')
   
-  switch(icon.className){
+  switch(currentIcon.className){
     case iconFullScreen:
-      icon.className = iconCloseFullScreen
+      currentIcon.className = iconCloseFullScreen
       break
     
     case iconCloseFullScreen:
-      icon.className = iconFullScreen
+      currentIcon.className = iconFullScreen
       break
   }
 })  
