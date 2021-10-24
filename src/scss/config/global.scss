@@ -64,9 +64,28 @@ p, h1, h2, h3, h4, h5, h6{
 body{
     background-size: cover;
     background-image: linear-gradient(90deg, #db2c7e 0%, #026773 50%, #00A49B 100%);
-    
     transition: all 0.1s linear;
     position: relative;
+}
+
+body.bg1{
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+body.bg2{
+    background-image: linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+body.bg3{
+    background-image: linear-gradient(90deg, #21D4FD 0%, #B721FF 100%);
+}
+
+body.bg4{
+    background-image: linear-gradient(90deg, #FAD961 0%, #ff701d 100%);
+}
+
+body.bg5{
+    background-image: linear-gradient(90deg, #db2c7e 0%, #026773 50%, #00A49B 100%);
 }
 
 body.fullScreen{

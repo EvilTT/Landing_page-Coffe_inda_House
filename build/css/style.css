@@ -383,7 +383,7 @@ template {
   font-display: swap;
   src: local("Manrope-Bold"), url("/fonts/Manrope-Bold.ttf") format("opentype");
 }
-.location_accordeon .accordion-item .accordion-item-content, .form_attendance label span, .form_you-contact label span, .feedback_text-title, .buttons-form .submit, .buttons-form .clear, .message .privacy-policy .pc-text, .message textarea, .form_attendance-title, .title-contact, .input-container .fullName, .catalog_text-tubs .tub, .content-wrapper .content_text .text, .about-title_text .btn a, .about-title_text p, .menu_text, .copyright {
+.privicy-text, .location_accordeon .accordion-item .accordion-item-content, .form_attendance label span, .form_you-contact label span, .feedback_text-title, .buttons-form .submit, .buttons-form .clear, .message .privacy-policy .pc-text, .message textarea, .form_attendance-title, .title-contact, .input-container .fullName, .catalog_text-tubs .tub, .content-wrapper .content_text .text, .about-title_text .btn a, .about-title_text p, .menu_text, .copyright {
   font-family: "Inter", sans-serif;
 }
 
@@ -459,6 +459,36 @@ body {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
   position: relative;
+}
+
+body.bg1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00DBDE), to(#FC00FF));
+  background-image: -o-linear-gradient(left, #00DBDE 0%, #FC00FF 100%);
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+body.bg2 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#FF3CAC), color-stop(50%, #784BA0), to(#2B86C5));
+  background-image: -o-linear-gradient(left, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  background-image: linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+body.bg3 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#21D4FD), to(#B721FF));
+  background-image: -o-linear-gradient(left, #21D4FD 0%, #B721FF 100%);
+  background-image: linear-gradient(90deg, #21D4FD 0%, #B721FF 100%);
+}
+
+body.bg4 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#FAD961), to(#ff701d));
+  background-image: -o-linear-gradient(left, #FAD961 0%, #ff701d 100%);
+  background-image: linear-gradient(90deg, #FAD961 0%, #ff701d 100%);
+}
+
+body.bg5 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#db2c7e), color-stop(50%, #026773), to(#00A49B));
+  background-image: -o-linear-gradient(left, #db2c7e 0%, #026773 50%, #00A49B 100%);
+  background-image: linear-gradient(90deg, #db2c7e 0%, #026773 50%, #00A49B 100%);
 }
 
 body.fullScreen {
@@ -1995,9 +2025,31 @@ header .connecting .instargam a:hover {
   color: #e2e2e2;
 }
 
-.privicy {
-  max-width: 100%;
-  margin: 0px;
+.privicy-text {
+  padding: 15px;
+  margin: 0;
+  min-width: 100%;
+}
+.privicy-text h1 {
+  text-align: center;
+  color: #2B2B2B;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.507);
+  font-size: calc( 25px + 20 * ((100vw - 320px) / 1600) );
+}
+.privicy-text h3 {
+  color: #2B2B2B;
+  font-size: calc( 20px + 5 * ((100vw - 320px) / 1600) );
+  margin-top: 15px;
+}
+.privicy-text p {
+  margin-top: 7px;
+  margin-left: 10px;
+  color: lightgrey;
+}
+.privicy-text span {
+  margin-top: 7px;
+  margin-left: 7px;
+  display: block;
 }
 
 .section-container-pc {

@@ -1,5 +1,4 @@
 const navigationContainer = document.querySelectorAll('.menu_text')
-const btnScrollUp = document.querySelector('.arrow_container')
 const toggleNavigation = document.querySelector('.menu_position__nav')
 const changeBgColorBtn = document.querySelector('.btn')
 
@@ -34,12 +33,6 @@ document.body.addEventListener('click', (event) => {
         return
     }
 
-    if (event.target.closest('.arrow_container')) {
-        event.preventDefault()
-        window.scroll({ top: 0, left: 0, behavior: 'smooth' })
-        return
-    }
-
     if (event.target.closest('.menu_position')) {
         event.preventDefault()
         let unker = event.target.closest('.menu_position').dataset.help
@@ -53,11 +46,11 @@ document.body.addEventListener('click', (event) => {
     if (changeBgColorBtn.contains(event.target)) {
         event.preventDefault()
         const gradienBackground = [
-            ['linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)'],
-            ['linear-gradient(90deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)'],
-            ['linear-gradient(90deg, #21D4FD 0%, #B721FF 100%)'],
-            ['linear-gradient(90deg, #FAD961 0%, #ff701d 100%)'],
-            ['linear-gradient(90deg, #db2c7e 0%, #026773 50%, #00A49B 100%)'],
+            ['bg1'],
+            ['bg2'],
+            ['bg3'],
+            ['bg4'],
+            ['bg5'],
         ]
 
         let randomNumber = () =>
@@ -66,12 +59,12 @@ document.body.addEventListener('click', (event) => {
         while (true) {
             let gradientNumber = randomNumber()
             if (gradientNumber !== currentGradient) {
+                document.body.classList.remove(gradienBackground[currentGradient - 1])
                 currentGradient = gradientNumber
                 break
             }
         }
-
-        document.body.style.background = gradienBackground[currentGradient - 1]
+        document.body.classList.add(gradienBackground[currentGradient - 1])
         return
     }
 
