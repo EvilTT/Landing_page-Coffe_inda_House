@@ -944,6 +944,10 @@ header .connecting .instargam a:hover {
   -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.63), 0 0 40px rgba(255, 255, 255, 0.63), 0 0 80px rgba(255, 255, 255, 0.63);
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.63), 0 0 40px rgba(255, 255, 255, 0.63), 0 0 80px rgba(255, 255, 255, 0.63);
 }
+.about-title_text .btn.mob div:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 .about-title_image {
   padding-left: 30px;
   margin-top: 80px;

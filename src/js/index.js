@@ -21,10 +21,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-document.body.addEventListener('mousedown', (event) => {
-    event.preventDefault()
-    if (changeBgColorBtn.contains(event.target)) {
-        console.log('mousedown')
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+ changeBgColorBtn.classList.add('mob')
+ console.log('mob')
+}
+
+const backgroundColor = () => {
         const gradienBackground = [['bg1'], ['bg2'], ['bg3'], ['bg4'], ['bg5']]
         let randomNumber = () =>
             Math.round(Math.random() * (gradienBackground.length - 1) + 1)
@@ -40,7 +42,14 @@ document.body.addEventListener('mousedown', (event) => {
             }
         }
         document.body.classList.add(gradienBackground[currentGradient - 1])
-        return
+        console.log('mousedown-done')
+}
+
+changeBgColorBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+    if (changeBgColorBtn.contains(event.target)) {
+        changeBgColorBtn.blur()
+        backgroundColor()
     }
 })
 

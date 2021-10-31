@@ -64,7 +64,14 @@ header{
             }
             }
         }
-        
+        .btn.mob{
+            div{
+                &:hover{
+                    box-shadow: none;
+                }
+    
+            }
+        }        
     }
     &_image{
         padding-left: 30px;
