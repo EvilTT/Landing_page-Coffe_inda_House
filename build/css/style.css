@@ -402,6 +402,7 @@ a {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-tap-highlight-color: #ccc;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -938,6 +939,10 @@ header .connecting .instargam a:hover {
 .about-title_text .btn div i {
   color: #2B2B2B;
   text-shadow: none;
+}
+.about-title_text .btn div:hover {
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.63), 0 0 40px rgba(255, 255, 255, 0.63), 0 0 80px rgba(255, 255, 255, 0.63);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.63), 0 0 40px rgba(255, 255, 255, 0.63), 0 0 80px rgba(255, 255, 255, 0.63);
 }
 .about-title_image {
   padding-left: 30px;
