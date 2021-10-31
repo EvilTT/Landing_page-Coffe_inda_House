@@ -43,7 +43,7 @@ header{
         .btn{
             margin-top: 45px;
             display: inline-block;
-            a{
+            div{
             text-decoration: none;
             border-radius: 5px;
             padding: 15px 35px;
@@ -59,9 +59,9 @@ header{
                 color: $black;
                 text-shadow: none;
             }
-            &:hover{
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.63), 0 0 40px rgba(255, 255, 255, 0.63), 0 0 80px rgba(255, 255, 255, 0.63);
-            }
+            // &:hover{
+            //     box-shadow: 0 0 10px rgba(255, 255, 255, 0.63), 0 0 40px rgba(255, 255, 255, 0.63), 0 0 80px rgba(255, 255, 255, 0.63);
+            // }
             }
         }
         

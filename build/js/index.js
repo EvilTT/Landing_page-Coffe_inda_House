@@ -3,7 +3,7 @@ const toggleNavigation = document.querySelector('.menu_position__nav')
 const changeBgColorBtn = document.querySelector('.btn')
 
 let numberOfClickToTitle = 0
-let currentGradient = undefined
+let currentGradient = 5
 
 window.onload = () => {
     document.body.classList.remove('send')
@@ -21,6 +21,29 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+document.body.addEventListener('mousedown', (event) => {
+    event.preventDefault()
+    if (changeBgColorBtn.contains(event.target)) {
+        console.log('mousedown')
+        const gradienBackground = [['bg1'], ['bg2'], ['bg3'], ['bg4'], ['bg5']]
+        let randomNumber = () =>
+            Math.round(Math.random() * (gradienBackground.length - 1) + 1)
+
+        while (true) {
+            let gradientNumber = randomNumber()
+            if (gradientNumber !== currentGradient) {
+                document.body.classList.remove(
+                    gradienBackground[currentGradient - 1]
+                )
+                currentGradient = gradientNumber
+                break
+            }
+        }
+        document.body.classList.add(gradienBackground[currentGradient - 1])
+        return
+    }
+})
+
 document.body.addEventListener('click', (event) => {
     if (
         event.target.classList.contains('menu_position__nav') ||
@@ -28,7 +51,9 @@ document.body.addEventListener('click', (event) => {
     ) {
         document.querySelector('.menu_navigation').classList.toggle('open_nav')
 
-        navigationContainer.forEach((item) => item.classList.toggle('open-menu'))
+        navigationContainer.forEach((item) =>
+            item.classList.toggle('open-menu')
+        )
         toggleNavigation.querySelector('i').classList.toggle('icon-close')
         return
     }
@@ -43,34 +68,12 @@ document.body.addEventListener('click', (event) => {
         return
     }
 
-    if (changeBgColorBtn.contains(event.target)) {
-        event.preventDefault()
-        const gradienBackground = [
-            ['bg1'],
-            ['bg2'],
-            ['bg3'],
-            ['bg4'],
-            ['bg5'],
-        ]
-
-        let randomNumber = () =>
-            Math.round(Math.random() * (gradienBackground.length - 1) + 1)
-
-        while (true) {
-            let gradientNumber = randomNumber()
-            if (gradientNumber !== currentGradient) {
-                document.body.classList.remove(gradienBackground[currentGradient - 1])
-                currentGradient = gradientNumber
-                break
-            }
-        }
-        document.body.classList.add(gradienBackground[currentGradient - 1])
-        return
-    }
-
     if (event.target.classList.contains('title')) {
         numberOfClickToTitle++
-        if (numberOfClickToTitle >= 10 && document.querySelector('.eruda') === null) {
+        if (
+            numberOfClickToTitle >= 10 &&
+            document.querySelector('.eruda') === null
+        ) {
             numberOfClickToTitle = 0
             let script = document.createElement('script')
             script.classList.add('eruda')
